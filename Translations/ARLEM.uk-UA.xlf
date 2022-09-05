@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="uk-UA" original="ARLEM">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1283816419 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Одиниця Обіду</source>
+          <target></target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Опис</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 1303377601 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Глобальний Вимір 1 Код</source>
+          <target>Описание</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Global Dimension 1 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 1337243520 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Dimension 2 Code</source>
+          <target>Глобальний Вимір 2 Код</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Global Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 663614874 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Info Link</source>
+          <target>Посилання на Інформацію</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Info Link - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>Номер Обіду</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <target>Зображення</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Picture - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>Ціна</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 3120733702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Self Order</source>
+          <target>Самозамовлення</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Self Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <target>Номер Постачальника</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1283816419 - Field 2854289444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Weight</source>
+          <target>Вага</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Item - Field Weight - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Menu</source>
+          <target>Обіднє меню </target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active</source>
+          <target>Активний</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 3322554545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set ID</source>
+          <target>Присвоєння номеру Глобального Виміру</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Dimension Set ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 2200046723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indentation</source>
+          <target>Відступ</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Indentation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 2842094365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Description</source>
+          <target>Опис товару </target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Item Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>Номер товару</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>Номер строки</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 158172202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Type</source>
+          <target>Тип строки</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Line Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 1378328065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menu Date</source>
+          <target>Дата меню</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Menu Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 3383215775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menu Item Entry No.</source>
+          <target>Номер замовлення з меню</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Menu Item Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 3260489966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Amount</source>
+          <target>Сума замовлення</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Order Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 3187171391 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Quantity</source>
+          <target>Кількість замовлення</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Order Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 2831283071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parent Menu Item No.</source>
+          <target>№ батьківського меню</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Parent Menu Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 1502303657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Previos Quantity</source>
+          <target>Попередня кількість</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Previos Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>Ціна</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 3120733702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Self Order</source>
+          <target>Самозамовлення</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Self Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 1577567912 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 1 Code</source>
+          <target>Вимір швидкого доступу 1 Код</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Shortcut Dimension 1 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 1003760969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 2 Code</source>
+          <target>Вимір швидкого доступу 2 Код</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <target>Номер Постачальника</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 124610185 - Field 2854289444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Weight</source>
+          <target>Вага</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Menu - Field Weight - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Order Entry</source>
+          <target>Записи замовлення обідів</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>Сума</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target>Номер замовлення</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 2842094365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Description</source>
+          <target>Опис товару</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Item Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 3383215775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menu Item Entry No.</source>
+          <target>Номер замовлення з меню</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Menu Item Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 2756737635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menu Item No.</source>
+          <target>Номер товару з меню</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Menu Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 2632124822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order Date</source>
+          <target>Дата замовлення</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Order Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>Ціна</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>Кількість</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 1651695111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resourse No.</source>
+          <target>Замовник</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Resourse No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>Статус</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <target>Номер Постачальника</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Item Card</source>
+          <target>Картка Обіду</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <target>Вимір</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Action Dimensions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 991365645 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Item List</source>
+          <target>Список продуктів для обіду</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 991365645 - Action 1778039114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions-Multiple</source>
+          <target>Кілька Вимірів</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item List - Action Dimensions-Multiple - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 991365645 - Action 937422408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <target>Вимір</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item List - Action Dimensions-Single - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1179759445 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Menu Edit</source>
+          <target>Редагування обіднього меню</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Menu Edit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 623242982 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Order</source>
+          <target>Замовлення Обіду</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 623242982 - Control 1607295407 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <target>Номер Постачальника</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Control VendorNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 623242982 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <target>Вимір</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Action Dimensions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 623242982 - Action 2664904737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit Menu</source>
+          <target>Редагування обіднього меню</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Action Edit Menu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 623242982 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report</source>
+          <target>Звіт</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Action Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 752799746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Order Entry</source>
+          <target>Список замовленних обідів</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 194772912 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Vendor Card</source>
+          <target>Картка Постачальника обідів</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Vendor Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3837730966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Vendor List</source>
+          <target>Список Постачальників обідів</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Vendor List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2867928321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menu For Today</source>
+          <target>Меню на сьогодні</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Menu For Today - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2266262807 - Control 313873647 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the value of the Lunch Item Nos. field.</source>
+          <target>Визначає значення поля «Номери продуктів обіду».</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Lunch Item Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 666563314 - Field 313873647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Lunch Item Nos.</source>
+          <target>Номери обідів</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesSetupExt - Field Lunch Item Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2378683151 - Field 1175034628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
+          <source>Lunch Vendor</source>
+          <target>Постачальник обідів</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Vendor Extension - Field Lunch Vendor - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
