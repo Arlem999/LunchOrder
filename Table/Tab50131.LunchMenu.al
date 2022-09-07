@@ -10,6 +10,12 @@ table 50131 "Lunch Menu"
             Caption = 'Vendor No.';
             DataClassification = ToBeClassified;
             TableRelation = Vendor."No." where("Lunch Vendor" = const(true));
+
+            trigger OnValidate()
+            begin
+                CreateDim(DATABASE::Vendor, "Vendor No.",
+                             DATABASE::"Lunch Item", "Item No.");
+            end;
         }
         field(2; "Menu Date"; Date)
         {
@@ -40,7 +46,7 @@ table 50131 "Lunch Menu"
                 END;
 
                 CreateDim(DATABASE::Vendor, "Vendor No.",
-                             DATABASE::"Lunch Menu", "Item Description");
+                             DATABASE::"Lunch Item", "Item No.");
             end;
 
         }
@@ -98,7 +104,7 @@ table 50131 "Lunch Menu"
         {
             Caption = 'Previos Quantity';
             FieldClass = FlowField;
-
+            MinValue = 0;
             CalcFormula = Sum("Lunch Order Entry".Quantity WHERE("Menu Item Entry No." = field("Menu Item Entry No.")));
         }
         field(15; "Self Order"; Boolean)
@@ -154,7 +160,7 @@ table 50131 "Lunch Menu"
     var
         DimMgt: Codeunit DimensionManagement;
 
-    local procedure ShowDimensions()
+    procedure ShowDimensions()
 
     begin
         "Dimension Set ID" := DimMgt.EditDimensionSet
@@ -189,17 +195,4 @@ table 50131 "Lunch Menu"
         DimMgt.ValidateShortcutDimValues(FieldNumber, ShortcutDimCode, "Dimension Set ID");
     end;
 
-    local procedure LookupShortcutDimCode(FieldNumber: Integer; VAR ShortcutDimCode: Code[20])
-    begin
-        DimMgt.LookupDimValueCode(FieldNumber, ShortcutDimCode);
-        ValidateShortcutDimCode(FieldNumber, ShortcutDimCode);
-    end;
-
-    local procedure ShowShortcutDimCode(VAR ShortcutDimCode: Code[20])
-    var
-        ShortcutDim: array[8] of Code[20];
-    begin
-        ShortcutDim[1] := ShortcutDimCode;
-        DimMgt.GetShortcutDimensions("Dimension Set ID", ShortcutDim);
-    end;
 }

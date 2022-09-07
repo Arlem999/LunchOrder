@@ -21,33 +21,22 @@ page 50155 "Lunch Order"
                     ApplicationArea = All;
                     Caption = 'Vendor No.';
                     TableRelation = Vendor."No." where("Lunch Vendor" = const(true));
-                    Editable = true;
-                    Enabled = true;
-                    Visible = true;
-                    QuickEntry = true;
 
 
                     trigger OnValidate()
-                    var
-                        VendorNo: code[30];
                     begin
                         Rec.DELETEALL;
-                        BEGIN
-                            VendorNo := Rec."Vendor No.";
-                            LunchMenu.SETRANGE("Vendor No.", VendorNo);
-                            LunchMenu.FINDLAST;
-                            LastMenuDate := LunchMenu."Menu Date";
-                        END;
-                        BEGIN
-                            LunchMenu.SETRANGE("Vendor No.", VendorNo);
-                            LunchMenu.SETRANGE("Menu Date", LastMenuDate);
-                            IF LunchMenu.FINDSET THEN
-                                REPEAT
-                                    Rec.INIT;
-                                    Rec := LunchMenu;
-                                    Rec.INSERT;
-                                UNTIL LunchMenu.NEXT = 0;
-                        END;
+                        LunchMenu.SETRANGE("Vendor No.", Rec."Vendor No.");
+                        LunchMenu.FINDLAST;
+                        LunchMenu.SETRANGE("Menu Date", LunchMenu."Menu Date");
+
+                        IF LunchMenu.FINDSET THEN
+                            REPEAT
+                                Rec.INIT;
+                                Rec := LunchMenu;
+                                Rec.INSERT;
+                            UNTIL LunchMenu.NEXT = 0;
+
                     end;
                 }
                 field("Menu Date"; Rec."Menu Date")
@@ -191,10 +180,10 @@ page 50155 "Lunch Order"
         }
         area(Reporting)
         {
-            action("Report")
+            action("Menu for Today")
             {
                 ApplicationArea = all;
-                Caption = 'Report';
+                Caption = 'Print Menu for Today';
                 Image = Report2;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -226,27 +215,28 @@ page 50155 "Lunch Order"
 
     trigger OnClosePage()
     var
-        ConfirmRecord: Boolean;
+        ConfirmOrder: Boolean;
         EntryNo: Integer;
+        OrderExist: Boolean;
     begin
-        if Rec.FINDSET then
-            REPEAT
-                IF Rec."Order Quantity" <> 0 THEN
-                    IF CONFIRM('Confirm the order ' + Rec."Item Description" + '?', TRUE) THEN
-                        ConfirmRecord := TRUE;
-            UNTIL Rec.NEXT = 0;
+        Rec.SetFilter("Order Quantity", '>0');
+        if not Rec.IsEmpty then
+            IF CONFIRM('Confirm the order ?', TRUE) THEN
+                ConfirmOrder := true;
 
-        IF ConfirmRecord THEN
+        IF ConfirmOrder THEN
             IF Rec.FINDSET THEN BEGIN
 
                 LunchOrder.FINDLAST;
                 EntryNo := LunchOrder."Entry No.";
 
                 REPEAT
+                    Rec.CalcFields("Previos Quantity");
+
                     IF Rec."Order Quantity" <> Rec."Previos Quantity" THEN BEGIN
 
                         LunchOrder.SETRANGE("Vendor No.", Rec."Vendor No.");
-                        LunchOrder.SETRANGE("Order Date", Rec."Menu Date");
+                        LunchOrder.SETRANGE("Order Date", Today);
                         LunchOrder.SETRANGE("Menu Item Entry No.", Rec."Menu Item Entry No.");
                         LunchOrder.SETRANGE("Resourse No.", USERID);
 
@@ -262,8 +252,11 @@ page 50155 "Lunch Order"
                             LunchOrder."Item Description" := Rec."Item Description";
                             LunchOrder.Quantity := Rec."Order Quantity";
                             LunchOrder.Price := Rec.Price;
+                            LunchOrder."Dimension Set ID" := Rec."Dimension Set ID";
+                            LunchOrder."Shortcut Dimension 1 Code" := Rec."Shortcut Dimension 1 Code";
+                            LunchOrder."Shortcut Dimension 2 Code" := Rec."Shortcut Dimension 2 Code";
                             LunchOrder.Amount := Rec."Order Amount";
-                            LunchOrder."Order Date" := Rec."Menu Date";
+                            LunchOrder."Order Date" := Today;
                             LunchOrder."Resourse No." := USERID;
                             LunchOrder.INSERT(TRUE);
                         END;

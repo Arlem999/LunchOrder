@@ -78,4 +78,22 @@ page 50152 "Lunch Menu Edit"
             }
         }
     }
+    actions
+    {
+        area(Navigation)
+        {
+            action(Dimensions)
+            {
+                Image = Dimensions;
+                ShortCutKey = "Shift+Ctrl+D";
+                ApplicationArea = All;
+                Caption = 'Dimensions';
+
+                trigger OnAction()
+                begin
+                    Rec.ShowDimensions();
+                end;
+            }
+        }
+    }
 }

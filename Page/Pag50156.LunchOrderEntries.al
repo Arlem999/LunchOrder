@@ -1,7 +1,7 @@
-page 50156 "Lunch Order Entry"
+page 50156 "Lunch Order Entries"
 {
     ApplicationArea = All;
-    Caption = 'Lunch Order Entry';
+    Caption = 'Lunch Order Entries';
     PageType = List;
     SourceTable = "Lunch Order Entry";
     UsageCategory = Lists;
@@ -62,11 +62,24 @@ page 50156 "Lunch Order Entry"
                 }
             }
         }
+
     }
-    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
-    var
-        myInt: Integer;
-    begin
-        Rec."Order Date" := TODAY;
-    end;
+    actions
+    {
+        area(Navigation)
+        {
+            action(Dimensions)
+            {
+                Image = Dimensions;
+                ShortCutKey = "Shift+Ctrl+D";
+                ApplicationArea = All;
+                Caption = 'Dimensions';
+
+                trigger OnAction()
+                begin
+                    Rec.ShowDimensions();
+                end;
+            }
+        }
+    }
 }

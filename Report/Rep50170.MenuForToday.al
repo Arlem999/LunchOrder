@@ -5,6 +5,7 @@ report 50170 "Menu For Today"
     ApplicationArea = All;
     Caption = 'Menu For Today';
     UsageCategory = ReportsAndAnalysis;
+
     dataset
     {
         dataitem(LunchMenu; "Lunch Menu")

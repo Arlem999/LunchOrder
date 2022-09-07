@@ -62,6 +62,22 @@ table 50132 "Lunch Order Entry"
             DataClassification = ToBeClassified;
             OptionMembers = Created,"Sent to Vendor",Posted;
         }
+        field(17; "Shortcut Dimension 1 Code"; Code[20])
+        {
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
+            CaptionClass = '1,1,1';
+        }
+        field(18; "Shortcut Dimension 2 Code"; Code[20])
+        {
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
+            CaptionClass = '1,1,2';
+
+        }
+        field(19; "Dimension Set ID"; Integer)
+        {
+            TableRelation = "Dimension Set Entry";
+            Caption = 'Dimension Set ID';
+        }
 
     }
     keys
@@ -71,4 +87,11 @@ table 50132 "Lunch Order Entry"
             Clustered = true;
         }
     }
+
+    procedure ShowDimensions()
+    var
+        DimMgt: Codeunit DimensionManagement;
+    begin
+        DimMgt.ShowDimensionSet("Dimension Set ID", StrSubstNo('%1 %2', TableCaption, "Entry No."));
+    end;
 }

@@ -42,7 +42,7 @@ table 50130 "Lunch Item"
             Caption = 'Price';
             DataClassification = ToBeClassified;
         }
-        field(6; Picture; BLOB)
+        field(6; Picture; MediaSet)
         {
             Caption = 'Picture';
             DataClassification = ToBeClassified;
@@ -81,6 +81,7 @@ table 50130 "Lunch Item"
         }
 
     }
+
     keys
     {
         key(PK; "Item No.")
@@ -88,6 +89,8 @@ table 50130 "Lunch Item"
             Clustered = true;
         }
     }
+
+
     trigger OnInsert()
     begin
         IF "Item No." = '' THEN BEGIN

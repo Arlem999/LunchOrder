@@ -168,6 +168,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Amount - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 752799746 - Field 3322554545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Dimension Set ID - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 752799746 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Entry No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -208,6 +213,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Resourse No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 752799746 - Field 1577567912 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 1 Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Shortcut Dimension 1 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 752799746 - Field 1003760969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 2 Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 752799746 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -218,10 +233,40 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Vendor No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1251438095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Lunch Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Lunch Picture - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1251438095 - NamedType 2865259996" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete the picture?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Lunch Picture - NamedType DeleteImageQst</note>
+        </trans-unit>
+        <trans-unit id="Page 1251438095 - NamedType 1398852855" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The existing picture will be replaced. Continue?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Lunch Picture - NamedType OverrideImageQst</note>
+        </trans-unit>
+        <trans-unit id="Page 1251438095 - Action 3119204463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Lunch Picture - Action DeletePicture - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1251438095 - Action 2864777531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Lunch Picture - Action ImportPicture - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3534201399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lunch Item Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Picture - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3534201399 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimensions</source>
@@ -248,6 +293,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Menu Edit - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1179759445 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Menu Edit - Action Dimensions - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 623242982 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lunch Order</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -268,15 +318,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Action Edit Menu - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 623242982 - Action 3375155882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Report</source>
+        <trans-unit id="Page 623242982 - Action 2424535969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Menu for Today</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Action Report - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Action Menu for Today - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 752799746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Lunch Order Entry</source>
+        <trans-unit id="Page 1077130524 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lunch Order Entries</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order Entry - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1077130524 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order Entries - Action Dimensions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 194772912 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Lunch Vendor Card</source>

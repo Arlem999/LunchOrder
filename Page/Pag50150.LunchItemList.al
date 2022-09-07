@@ -6,6 +6,7 @@ page 50150 "Lunch Item List"
     ApplicationArea = All;
     UsageCategory = Lists;
     CardPageId = "Lunch Item Card";
+    Editable = false;
 
     layout
     {

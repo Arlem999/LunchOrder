@@ -3,6 +3,7 @@ page 50153 "Lunch Vendor List"
     Caption = 'Lunch Vendor List';
     PageType = List;
     SourceTable = Vendor;
+    SourceTableView = Where("Lunch Vendor" = const(true));
     ApplicationArea = All;
     UsageCategory = Lists;
     CardPageId = "Lunch Vendor Card";
