@@ -9,6 +9,7 @@ pageextension 50143 SalesSetupPageExt extends "Sales & Receivables Setup"
             {
                 ApplicationArea = All;
                 ToolTip = 'Specifies the value of the Lunch Item Nos. field.';
+                Caption = 'Lunch Item Nos.';
             }
 
         }

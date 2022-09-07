@@ -15,27 +15,21 @@ report 50170 "Menu For Today"
 
             column(MenuDate_LunchMenu; "Menu Date")
             {
-
             }
             column(ItemNo_LunchMenu; "Item No.")
             {
-
             }
             column(Weight_LunchMenu; Weight)
             {
-
             }
             column(Price_LunchMenu; Price)
             {
-
             }
             column(Description; "Item Description")
             {
-
             }
             column(MenuDate; MenuDate)
             {
-
             }
             trigger OnPreDataItem()
 
@@ -54,7 +48,6 @@ report 50170 "Menu For Today"
                 {
                     field(MenuDate; MenuDate)
                     {
-
                     }
                 }
             }

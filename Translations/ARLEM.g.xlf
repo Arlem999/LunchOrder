@@ -248,6 +248,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Item Lunch Picture - NamedType OverrideImageQst</note>
         </trans-unit>
+        <trans-unit id="Page 1251438095 - Control 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Item Lunch Picture - Control Picture - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1251438095 - Action 3119204463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Delete</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -262,6 +267,41 @@
           <source>Lunch Item Card</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 663614874 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Info Link</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Info Link - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 3120733702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Self Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Self Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3534201399 - Control 2854289444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Weight</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Weight - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3534201399 - Control 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Picture</source>

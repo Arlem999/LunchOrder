@@ -19,14 +19,13 @@ page 50155 "Lunch Order"
                 field(VendorNo; Rec."Vendor No.")
                 {
                     ApplicationArea = All;
-                    Caption = 'Vendor No.';
                     TableRelation = Vendor."No." where("Lunch Vendor" = const(true));
 
 
                     trigger OnValidate()
                     begin
                         Rec.DELETEALL;
-                        LunchMenu.SETRANGE("Vendor No.", Rec."Vendor No.");
+                        LunchMenu.SetFilter("Vendor No.", Rec."Vendor No.");
                         LunchMenu.FINDLAST;
                         LunchMenu.SETRANGE("Menu Date", LunchMenu."Menu Date");
 
@@ -37,7 +36,9 @@ page 50155 "Lunch Order"
                                 Rec.INSERT;
                             UNTIL LunchMenu.NEXT = 0;
 
+                        LunchMenu.SetRange("Menu Date");
                     end;
+
                 }
                 field("Menu Date"; Rec."Menu Date")
                 {
@@ -214,63 +215,12 @@ page 50155 "Lunch Order"
     end;
 
     trigger OnClosePage()
-    var
-        ConfirmOrder: Boolean;
-        EntryNo: Integer;
-        OrderExist: Boolean;
     begin
-        Rec.SetFilter("Order Quantity", '>0');
-        if not Rec.IsEmpty then
-            IF CONFIRM('Confirm the order ?', TRUE) THEN
-                ConfirmOrder := true;
-
-        IF ConfirmOrder THEN
-            IF Rec.FINDSET THEN BEGIN
-
-                LunchOrder.FINDLAST;
-                EntryNo := LunchOrder."Entry No.";
-
-                REPEAT
-                    Rec.CalcFields("Previos Quantity");
-
-                    IF Rec."Order Quantity" <> Rec."Previos Quantity" THEN BEGIN
-
-                        LunchOrder.SETRANGE("Vendor No.", Rec."Vendor No.");
-                        LunchOrder.SETRANGE("Order Date", Today);
-                        LunchOrder.SETRANGE("Menu Item Entry No.", Rec."Menu Item Entry No.");
-                        LunchOrder.SETRANGE("Resourse No.", USERID);
-
-                        IF LunchOrder.FINDFIRST THEN BEGIN
-                            LunchOrder.Quantity += Rec."Order Quantity";
-                            LunchOrder.Amount += Rec."Order Amount";
-                            LunchOrder.MODIFY(TRUE);
-                        END ELSE BEGIN
-                            EntryNo += 1;
-                            LunchOrder."Entry No." := EntryNo;
-                            LunchOrder."Menu Item Entry No." := Rec."Menu Item Entry No.";
-                            LunchOrder."Vendor No." := Rec."Vendor No.";
-                            LunchOrder."Item Description" := Rec."Item Description";
-                            LunchOrder.Quantity := Rec."Order Quantity";
-                            LunchOrder.Price := Rec.Price;
-                            LunchOrder."Dimension Set ID" := Rec."Dimension Set ID";
-                            LunchOrder."Shortcut Dimension 1 Code" := Rec."Shortcut Dimension 1 Code";
-                            LunchOrder."Shortcut Dimension 2 Code" := Rec."Shortcut Dimension 2 Code";
-                            LunchOrder.Amount := Rec."Order Amount";
-                            LunchOrder."Order Date" := Today;
-                            LunchOrder."Resourse No." := USERID;
-                            LunchOrder.INSERT(TRUE);
-                        END;
-                    END;
-                UNTIL Rec.NEXT = 0;
-            END;
-
-        Rec.DELETEALL(TRUE);
+        ConfirmOrder.SaveOrder(Rec);
     end;
 
     var
         BoltText: Boolean;
-        LunchOrder: Record "Lunch Order Entry";
         LunchMenu: Record "Lunch Menu";
-        LastMenuDate: Date;
-
+        ConfirmOrder: Codeunit ConfirmOrder;
 }
