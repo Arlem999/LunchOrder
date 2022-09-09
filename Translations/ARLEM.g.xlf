@@ -268,41 +268,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3534201399 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Description - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3534201399 - Control 663614874 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Info Link</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Info Link - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3534201399 - Control 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Item No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3534201399 - Control 3635338911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3534201399 - Control 3120733702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Self Order</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Self Order - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3534201399 - Control 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Vendor No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3534201399 - Control 2854289444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Weight</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item Card - Control Weight - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3534201399 - Control 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Picture</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -317,6 +282,11 @@
           <source>Lunch Item List</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 991365645 - Control 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Picture</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item List - Control Picture - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 991365645 - Action 1778039114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimensions-Multiple</source>
@@ -342,11 +312,6 @@
           <source>Lunch Order</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 623242982 - Control 1607295407 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Control VendorNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 623242982 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimensions</source>
@@ -392,6 +357,11 @@
           <source>Specifies the value of the Lunch Item Nos. field.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Lunch Item Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2266262807 - Control 313873647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Lunch Item Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Lunch Item Nos. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4121073707 - Control 1175034628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Lunch Vendor</source>
