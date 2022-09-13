@@ -3,22 +3,17 @@ codeunit 50101 ConfirmOrder
     procedure SaveOrder(var Rec: Record "Lunch Menu")
     var
         ConfirmOrder: Boolean;
-        EntryNo: Integer;
         OrderExist: Boolean;
         LunchOrder: Record "Lunch Order Entry";
+        ConfirmOrderTxt: Label 'Confirm the order ?';
     begin
         Rec.SetFilter("Order Quantity", '>0');
         if not Rec.IsEmpty then
-            IF CONFIRM('Confirm the order ?', TRUE) THEN
+            IF CONFIRM(ConfirmOrderTxt, TRUE) THEN
                 ConfirmOrder := true;
 
         IF ConfirmOrder THEN
             IF Rec.FINDSET THEN BEGIN
-
-                if Not LunchOrder.IsEmpty then begin
-                    LunchOrder.FINDLAST;
-                    EntryNo := LunchOrder."Entry No.";
-                end;
 
                 REPEAT
                     Rec.CalcFields("Previos Quantity");
@@ -35,8 +30,7 @@ codeunit 50101 ConfirmOrder
                             LunchOrder.Amount += Rec."Order Amount";
                             LunchOrder.MODIFY(TRUE);
                         END ELSE BEGIN
-                            EntryNo += 1;
-                            LunchOrder."Entry No." := EntryNo;
+                            LunchOrder."Entry No." := 0;
                             LunchOrder."Menu Item Entry No." := Rec."Menu Item Entry No.";
                             LunchOrder."Vendor No." := Rec."Vendor No.";
                             LunchOrder."Menu Item No." := Rec."Item No.";
@@ -55,6 +49,6 @@ codeunit 50101 ConfirmOrder
                 UNTIL Rec.NEXT = 0;
             END;
 
-        Rec.DELETEALL(TRUE);
+        Rec.DELETEALL(true);
     end;
 }

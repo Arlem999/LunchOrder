@@ -24,8 +24,9 @@ page 50155 "Lunch Order"
 
                     trigger OnValidate()
                     begin
-                        Rec.DELETEALL;
-                        LunchMenu.SetFilter("Vendor No.", Rec."Vendor No.");
+                        Rec.Reset();
+                        Rec.DeleteAll();
+                        LunchMenu.SetRange("Vendor No.", Rec."Vendor No.");
                         LunchMenu.FINDLAST;
                         LunchMenu.SETRANGE("Menu Date", LunchMenu."Menu Date");
 
@@ -38,7 +39,6 @@ page 50155 "Lunch Order"
 
                         LunchMenu.SetRange("Menu Date");
                     end;
-
                 }
                 field("Menu Date"; Rec."Menu Date")
                 {
@@ -55,10 +55,7 @@ page 50155 "Lunch Order"
                 field(Indentation; Rec.Indentation)
                 {
                     ApplicationArea = All;
-                    Editable = Rec.Active;
-                    StyleExpr = BoltText;
-                    Style = StrongAccent;
-
+                    Visible = false;
                 }
                 field("Line No."; Rec."Line No.")
                 {
@@ -177,6 +174,26 @@ page 50155 "Lunch Order"
                 PromotedCategory = Process;
                 PromotedOnly = true;
                 RunObject = Page "Lunch Menu Edit";
+            }
+        }
+
+        area(Creation)
+        {
+            action("Order")
+            {
+                ApplicationArea = All;
+                Caption = 'Order';
+                Image = Order;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedOnly = true;
+
+                trigger OnAction()
+                var
+                    myInt: Integer;
+                begin
+                    ConfirmOrder.SaveOrder(Rec);
+                end;
             }
         }
         area(Reporting)

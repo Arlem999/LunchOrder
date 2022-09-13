@@ -7,6 +7,11 @@ tableextension 50142 SalesSetupExt extends "Sales & Receivables Setup"
             Caption = 'Lunch Item Nos.';
             TableRelation = "No. Series";
         }
+        field(50102; "Lunch Vendor Nos."; code[20])
+        {
+            Caption = 'Lunch Vendor Nos.';
+            TableRelation = "No. Series";
+        }
     }
 }
 

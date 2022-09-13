@@ -11,7 +11,12 @@ pageextension 50143 SalesSetupPageExt extends "Sales & Receivables Setup"
                 ToolTip = 'Specifies the value of the Lunch Item Nos. field.';
                 Caption = 'Lunch Item Nos.';
             }
-
+            field("Lunch Vendor Nos."; "Lunch Vendor Nos.")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the value of the Lunch Vendor Nos. field.';
+                Caption = 'Lunch Vendor Nos.';
+            }
         }
     }
 }

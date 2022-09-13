@@ -233,6 +233,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Vendor No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3824892168 - Method 1291906449 - NamedType 3450821688" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm the order ?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ConfirmOrder - Method SaveOrder - NamedType ConfirmOrderTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1459700195 - Method 1407619943 - NamedType 848472796" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, but this item has already been added to the order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Lunch Delete And Modify Events - Method OnBeforeDeleteEvent - NamedType ErrorTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1459700195 - Method 941157096 - NamedType 848472796" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, but this item has already been added to the order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Lunch Delete And Modify Events - Method OnBeforeModifyEvent - NamedType ErrorTxt</note>
+        </trans-unit>
         <trans-unit id="Page 1251438095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Lunch Picture</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -283,11 +298,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item List - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 991365645 - Control 1594621544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Picture</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Item List - Control Picture - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 991365645 - Action 1778039114 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimensions-Multiple</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -312,6 +322,11 @@
           <source>Lunch Order</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 623242982 - Action 146219450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Order - Action Order - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 623242982 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimensions</source>
@@ -363,6 +378,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Lunch Item Nos. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2266262807 - Control 3139450616 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the value of the Lunch Vendor Nos. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Lunch Vendor Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2266262807 - Control 3139450616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Lunch Vendor Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Lunch Vendor Nos. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4121073707 - Control 1175034628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Lunch Vendor</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -372,6 +397,11 @@
           <source>Lunch Item Nos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesSetupExt - Field Lunch Item Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 666563314 - Field 3139450616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Lunch Vendor Nos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesSetupExt - Field Lunch Vendor Nos. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2378683151 - Field 1175034628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
           <source>Lunch Vendor</source>

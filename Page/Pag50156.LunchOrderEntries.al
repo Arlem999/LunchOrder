@@ -19,6 +19,7 @@ page 50156 "Lunch Order Entries"
                 field("Entry No."; Rec."Entry No.")
                 {
                     ApplicationArea = All;
+
                 }
                 field("Order Date"; Rec."Order Date")
                 {
@@ -35,10 +36,12 @@ page 50156 "Lunch Order Entries"
                 field("Vendor No."; Rec."Vendor No.")
                 {
                     ApplicationArea = All;
+                    TableRelation = Vendor."No." where("Lunch Vendor" = const(true));
                 }
                 field("Menu Item No."; Rec."Menu Item No.")
                 {
                     ApplicationArea = All;
+                    TableRelation = "Lunch Item"."Item No." where("Item No." = field("Menu Item No."));
                 }
                 field("Item Description"; Rec."Item Description")
                 {

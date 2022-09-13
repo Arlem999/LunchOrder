@@ -36,6 +36,7 @@ page 50153 "Lunch Vendor List"
                 field("Lunch Vendor"; Rec."Lunch Vendor")
                 {
                     ApplicationArea = All;
+                    Visible = false;
                 }
             }
         }
