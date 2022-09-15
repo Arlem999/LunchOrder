@@ -238,6 +238,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ConfirmOrder - Method SaveOrder - NamedType ConfirmOrderTxt</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3439915439 - NamedType 1430526505" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set Up Custom description Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Custom Assisted Setup Arlem - NamedType SetupTxt</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1459700195 - Method 1407619943 - NamedType 848472796" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sorry, but this item has already been added to the order</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -247,6 +252,106 @@
           <source>Sorry, but this item has already been added to the order</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Lunch Delete And Modify Events - Method OnBeforeModifyEvent - NamedType ErrorTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Custom Posting Descrip Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 300852202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control FinishedBanner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 1121962313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control StandardBanner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 3647570164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Let's go!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Let's go! - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 727926705 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To continue: click Next</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group22 - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 727926705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group22 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 2448589089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Welcome to Custom Posting Descrip Setup Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Welcome to Custom Posting Descrip Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 1612614122 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Here you can add your Custom description for sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group18 - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 1612614122 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group18 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 2279239964 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter a value and click Next</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Step2 - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 2279239964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Step2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 510691551 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Here you can add your Custom description for sales</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Custom Posting Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 1365623322 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to save this value?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group23 - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 1365623322 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group23 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 1546979963 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>That's it!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control That's it! - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 2641016556 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To save this setup, choose Finish.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group25 - Property InstructionalText</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Control 2641016556 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Control Group25 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Action ActionBack - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Action ActionFinish - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3102238896 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Custom Posting Arlem - Action ActionNext - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1251438095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Lunch Picture</source>
@@ -368,6 +473,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Menu For Today - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1336009290 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1708100201">
+          <source>"Custom ARLEM Posting Description"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Credit Memo Ext - Control Custom Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3985572540 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
+          <source>"Custom ARLEM Posting Description"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Ext - Control Custom Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1633892545 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>"Custom ARLEM Posting Description"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Ext - Control Custom Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 99219797 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
+          <source>"Custom ARLEM Posting Description"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Ext - Control Custom Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2445073215 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1598289728">
+          <source>"Custom ARLEM Posting Description"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Return Order Ext - Control Custom Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2266262807 - Control 313873647 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
           <source>Specifies the value of the Lunch Item Nos. field.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -392,6 +522,11 @@
           <source>Lunch Vendor</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Card Ext - Control Lunch Vendor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4190488490 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Custom Posting Description ARLEM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Header Ext - Field Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 666563314 - Field 313873647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Lunch Item Nos.</source>
