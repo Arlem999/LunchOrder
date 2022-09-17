@@ -1,4 +1,4 @@
-tableextension 50101 "Sales Header Ext" extends "Sales Header"
+tableextension 50107 "Purch. Inv. Header Ext" extends "Purch. Inv. Header"
 {
     fields
     {
@@ -6,7 +6,6 @@ tableextension 50101 "Sales Header Ext" extends "Sales Header"
         {
             Caption = 'Custom Posting Description ARLEM';
             DataClassification = ToBeClassified;
-            NotBlank = true;
         }
     }
 }

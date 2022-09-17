@@ -30,5 +30,5 @@ codeunit 50102 "Custom Assisted Setup Arlem"
 
     var
         Info: ModuleInfo;
-        SetupTxt: Label 'Set Up Custom description Arlem';
+        SetupTxt: Label 'Set Up Custom descript. Arlem';
 }

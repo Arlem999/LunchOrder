@@ -1,4 +1,4 @@
-tableextension 50101 "Sales Header Ext" extends "Sales Header"
+tableextension 50102 "Sales Cr.Memo Header Ext" extends "Sales Cr.Memo Header"
 {
     fields
     {
@@ -6,7 +6,6 @@ tableextension 50101 "Sales Header Ext" extends "Sales Header"
         {
             Caption = 'Custom Posting Description ARLEM';
             DataClassification = ToBeClassified;
-            NotBlank = true;
         }
     }
 }

@@ -1,4 +1,4 @@
-tableextension 50101 "Sales Header Ext" extends "Sales Header"
+tableextension 50105 "Sales Header Archive Ext" extends "Sales Header Archive"
 {
     fields
     {
@@ -6,7 +6,6 @@ tableextension 50101 "Sales Header Ext" extends "Sales Header"
         {
             Caption = 'Custom Posting Description ARLEM';
             DataClassification = ToBeClassified;
-            NotBlank = true;
         }
     }
 }

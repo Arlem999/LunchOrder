@@ -239,7 +239,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ConfirmOrder - Method SaveOrder - NamedType ConfirmOrderTxt</note>
         </trans-unit>
         <trans-unit id="Codeunit 3439915439 - NamedType 1430526505" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Set Up Custom description Arlem</source>
+          <source>Set Up Custom descript. Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Custom Assisted Setup Arlem - NamedType SetupTxt</note>
         </trans-unit>
@@ -473,6 +473,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Menu For Today - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2910264577 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
+          <source>"Custom ARLEM Posting Description"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales Credit Memo Ext - Control Custom Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1336009290 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1708100201">
           <source>"Custom ARLEM Posting Description"</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -523,10 +528,30 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Card Ext - Control Lunch Vendor - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1556408509 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Custom Posting Description ARLEM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Cr.Memo Header Ext - Field Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 918849336 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Custom Posting Description ARLEM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Header Archive Ext - Field Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 4190488490 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Custom Posting Description ARLEM</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Header Ext - Field Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 281671065 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Custom Posting Description ARLEM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Header Ext - Field Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1231616122 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Custom Posting Description ARLEM</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Shipment Header Ext - Field Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 666563314 - Field 313873647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Lunch Item Nos.</source>
