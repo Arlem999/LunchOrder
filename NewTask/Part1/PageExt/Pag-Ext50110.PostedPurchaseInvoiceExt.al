@@ -8,7 +8,7 @@ pageextension 50110 "Posted Purchase Invoice Ext" extends "Posted Purchase Invoi
             field("Custom Posting Description ARLEM"; Rec."Posting Description ARLEM")
             {
                 ApplicationArea = All;
-                Caption = '"Custom ARLEM Posting Description"';
+                Caption = 'Custom ARLEM Posting Description';
                 Editable = false;
             }
         }

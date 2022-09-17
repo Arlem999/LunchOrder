@@ -8,7 +8,7 @@ pageextension 50102 "Sales Order Ext" extends "Sales Order"
             field("Custom Posting Description ARLEM"; Rec."Posting Description ARLEM")
             {
                 ApplicationArea = All;
-                Caption = '"Custom ARLEM Posting Description"';
+                Caption = 'Custom ARLEM Posting Description';
                 ShowMandatory = true;
                 NotBlank = true;
 

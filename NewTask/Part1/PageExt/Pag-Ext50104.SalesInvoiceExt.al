@@ -8,7 +8,7 @@ pageextension 50104 "Sales Invoice Ext" extends "Sales Invoice"
             field("Custom Posting Description ARLEM"; Rec."Posting Description ARLEM")
             {
                 ApplicationArea = All;
-                Caption = '"Custom ARLEM Posting Description"';
+                Caption = 'Custom ARLEM Posting Description';
             }
         }
     }

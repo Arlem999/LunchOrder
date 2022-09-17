@@ -8,7 +8,7 @@ pageextension 50103 "Sales Quote Ext" extends "Sales Quote"
             field("Custom Posting Description ARLEM"; Rec."Posting Description ARLEM")
             {
                 ApplicationArea = All;
-                Caption = '"Custom ARLEM Posting Description"';
+                Caption = 'Custom ARLEM Posting Description';
             }
         }
     }
