@@ -8,6 +8,6 @@ codeunit 50103 OnAfterConfirmPostExt
     var
         PurchInvHeader: Record "Purch. Inv. Header";
     begin
-        PurchInvHeader."Number of lines" := PurchaseHeader."Number of lines";
+
     end;
 }
