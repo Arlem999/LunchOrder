@@ -3,7 +3,6 @@ page 50102 "Custom Posting Arlem"
     Caption = 'Custom Posting Descrip Arlem';
     PageType = NavigatePage;
     SourceTable = "Sales Header";
-    SourceTableTemporary = true;
 
     layout
     {
@@ -68,6 +67,7 @@ page 50102 "Custom Posting Arlem"
                 {
                     ToolTip = 'Here you can add your Custom description for sales';
                     ApplicationArea = All;
+                    Editable = true;
                 }
 
             }
@@ -130,7 +130,7 @@ page 50102 "Custom Posting Arlem"
                 InFooterBar = true;
                 trigger OnAction();
                 begin
-                    FinishAction();
+                    CurrPage.Close();
                 end;
             }
         }
@@ -142,15 +142,7 @@ page 50102 "Custom Posting Arlem"
     end;
 
     trigger OnOpenPage();
-    var
-        CustomPostingDescrip: Record "Sales Header";
     begin
-        Rec.Init();
-        if CustomPostingDescrip.Get() then
-            Rec.TransferFields(CustomPostingDescrip);
-
-        Rec.Insert();
-
         Step := Step::Start;
         EnableControls();
     end;
@@ -181,26 +173,6 @@ page 50102 "Custom Posting Arlem"
             Step::Finish:
                 ShowStep3();
         end;
-    end;
-
-    local procedure StoreRecordVar();
-    var
-        CustomPostingDescrip: Record "Sales Header";
-    begin
-        // if not CustomPostingDescrip.Get() then begin
-        //     CustomPostingDescrip.Init();
-        //     CustomPostingDescrip.Insert();
-        // end;
-
-        // CustomPostingDescrip.TransferFields(Rec, false);
-        // CustomPostingDescrip.Modify(true);
-
-    end;
-
-    local procedure FinishAction();
-    begin
-        StoreRecordVar();
-        CurrPage.Close();
     end;
 
     local procedure NextStep(Backwards: Boolean);

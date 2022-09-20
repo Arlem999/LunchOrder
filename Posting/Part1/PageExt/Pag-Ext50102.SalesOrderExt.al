@@ -24,12 +24,7 @@ pageextension 50102 "Sales Order Ext" extends "Sales Order"
                 Caption = 'Wizard Arlem';
                 Image = FiledPosted;
                 RunObject = page "Custom Posting Arlem";
-
-                trigger OnAction();
-                begin
-                    Rec."Posting Description ARLEM" := 'test';
-
-                end;
+                RunPageLink = "No." = field("No.");
             }
         }
     }
