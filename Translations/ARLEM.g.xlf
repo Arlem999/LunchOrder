@@ -473,53 +473,98 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Menu For Today - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2049863388 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2854365759">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Credit Memo Ex - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3121630086 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4048657685">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Invoice Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3121630086 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4048657685">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Invoice Ext - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1845170321 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2344297010">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Purchase Receipt Ext - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1910779042 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 52957233">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Return Receipt Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2910264577 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales Credit Memo Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4007767091 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales Invoice Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2473596852 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3373253667">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales Shipment Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2760418655 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4042331808">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Credit Memo Ext - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2428160853 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Invoice Ext - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 515410600 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Order Ext - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2029618108 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3321822267">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Quote Ext - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 803317490 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1555938241">
+          <source>Number of lines Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Purchase Return Order Ext - Control Number of lines Arlem - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1336009290 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1708100201">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Credit Memo Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3985572540 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1633892545 - Action 922191573 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Wizard Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Ext - Action Wizard - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1633892545 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 99219797 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Quote Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2445073215 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1598289728">
-          <source>"Custom ARLEM Posting Description"</source>
+          <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Return Order Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
@@ -548,15 +593,40 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Card Ext - Control Lunch Vendor - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 729837370 - Field 2777476369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Number of lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purch. Cr. Memo Hdr. Ext - Field Number of lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 200431781 - Field 2777476369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Number of lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purch. Inv. Header Ext - Field Number of lines - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 200431781 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
           <source>Custom Posting Description ARLEM</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purch. Inv. Header Ext - Field Posting Description ARLEM - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1971182185 - Field 2777476369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Number of lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purch. Rcpt. Header Ext - Field Number of lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3179004455 - Field 2777476369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Number of lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purchase Header Ext - Field Number of lines - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2276954812 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2925931323">
           <source>Custom Posting Description ARLEM</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Return Receipt Header Ext - Field Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3099801392 - Field 2777476369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1721347679">
+          <source>Number of lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Return Shipment Header Ext - Field Number of lines - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1556408509 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
           <source>Custom Posting Description ARLEM</source>

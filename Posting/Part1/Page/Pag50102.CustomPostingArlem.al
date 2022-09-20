@@ -187,13 +187,14 @@ page 50102 "Custom Posting Arlem"
     var
         CustomPostingDescrip: Record "Sales Header";
     begin
-        if not CustomPostingDescrip.Get() then begin
-            CustomPostingDescrip.Init();
-            CustomPostingDescrip.Insert();
-        end;
+        // if not CustomPostingDescrip.Get() then begin
+        //     CustomPostingDescrip.Init();
+        //     CustomPostingDescrip.Insert();
+        // end;
 
-        CustomPostingDescrip.TransferFields(Rec, false);
-        CustomPostingDescrip.Modify(true);
+        // CustomPostingDescrip.TransferFields(Rec, false);
+        // CustomPostingDescrip.Modify(true);
+
     end;
 
     local procedure FinishAction();
