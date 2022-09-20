@@ -6,6 +6,7 @@ tableextension 50111 "Purch. Rcpt. Header Ext" extends "Purch. Rcpt. Header"
         {
             Caption = 'Number of lines';
             TableRelation = "Purchase Header"."Number of lines" where("No." = field("No."));
+
         }
     }
 }
