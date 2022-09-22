@@ -4,21 +4,14 @@ codeunit 50103 OnAfterInsertPostedHeaders
     SingleInstance = true;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterInsertPostedHeaders', '', true, true)]
-    local procedure OnAfterInsertPostedHeaders(var PurchaseHeader: Record "Purchase Header"; var PurchInvHeader: Record "Purch. Inv. Header")
+    local procedure OnAfterInsertPostedHeaders(var PurchaseHeader: Record "Purchase Header"; var PurchRcptHeader: Record "Purch. Rcpt. Header"; var PurchInvHeader: Record "Purch. Inv. Header"; var PurchCrMemoHdr: Record "Purch. Cr. Memo Hdr."; var ReturnShptHeader: Record "Return Shipment Header"; var PurchSetup: Record "Purchases & Payables Setup")
 
     begin
         PurchaseHeader.CalcFields("Number of lines");
-        PurchInvHeader."Number of lines" := PurchaseHeader."Number of lines";
-        PurchInvHeader.Modify();
-    end;
-
-
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterInsertPostedHeaders', '', true, true)]
-    local procedure OnAfterInsertReceiptHeader(var PurchaseHeader: Record "Purchase Header"; var PurchRcptHeader: Record "Purch. Rcpt. Header")
-
-    begin
-        PurchaseHeader.CalcFields("Number of lines");
-        PurchRcptHeader."Number of lines" := PurchaseHeader."Number of lines";
-        PurchRcptHeader.Modify();
+        if PurchaseHeader."Number of lines" <> 0 then begin
+            PurchInvHeader."Number of lines" := PurchaseHeader."Number of lines";
+            PurchRcptHeader."Number of lines" := PurchaseHeader."Number of lines";
+            PurchInvHeader.Modify();
+        end;
     end;
 }
