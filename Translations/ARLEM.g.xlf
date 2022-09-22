@@ -238,11 +238,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ConfirmOrder - Method SaveOrder - NamedType ConfirmOrderTxt</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3439915439 - NamedType 1430526505" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Set Up Custom descript. Arlem</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Custom Assisted Setup Arlem - NamedType SetupTxt</note>
-        </trans-unit>
         <trans-unit id="Codeunit 1459700195 - Method 1407619943 - NamedType 848472796" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sorry, but this item has already been added to the order</source>
           <note from="Developer" annotates="general" priority="2"></note>

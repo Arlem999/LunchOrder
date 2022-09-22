@@ -10,6 +10,7 @@ pageextension 50102 "Sales Order Ext" extends "Sales Order"
                 ApplicationArea = All;
                 Caption = 'Custom ARLEM Posting Description';
                 ShowMandatory = true;
+                Editable = false;
 
                 trigger OnValidate()
                 begin
