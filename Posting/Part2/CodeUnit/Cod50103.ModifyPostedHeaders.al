@@ -9,9 +9,14 @@ codeunit 50103 OnAfterInsertPostedHeaders
     begin
         PurchaseHeader.CalcFields("Number of lines");
         if PurchaseHeader."Number of lines" <> 0 then begin
-            PurchInvHeader."Number of lines" := PurchaseHeader."Number of lines";
-            PurchRcptHeader."Number of lines" := PurchaseHeader."Number of lines";
-            PurchInvHeader.Modify();
+            if PurchInvHeader."No." <> '' then begin
+                PurchInvHeader."Number of lines" := PurchaseHeader."Number of lines";
+                PurchInvHeader.Modify();
+            end;
+            if PurchRcptHeader."No." <> '' then begin
+                PurchRcptHeader."Number of lines" := PurchaseHeader."Number of lines";
+                PurchaseHeader.Modify();
+            end;
         end;
     end;
 }

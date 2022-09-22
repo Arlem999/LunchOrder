@@ -7,7 +7,9 @@ codeunit 50104 OnAfterUpdateSalesHeader
     local procedure OnAfterUpdateSalesHeader(var CustLedgerEntry: Record "Cust. Ledger Entry"; var SalesInvoiceHeader: Record "Sales Invoice Header")
 
     begin
-        CustLedgerEntry."Posting Description ARLEM" := SalesInvoiceHeader."Posting Description ARLEM";
-        CustLedgerEntry.Modify();
+        If SalesInvoiceHeader."Posting Description ARLEM" <> '' then begin
+            CustLedgerEntry."Posting Description ARLEM" := SalesInvoiceHeader."Posting Description ARLEM";
+            CustLedgerEntry.Modify();
+        end;
     end;
 }
