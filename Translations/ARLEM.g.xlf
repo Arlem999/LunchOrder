@@ -468,6 +468,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Menu For Today - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 1462604466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ReportBuilderManage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report ReportBuilderManage - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1467278014 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
           <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -548,6 +553,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Invoice Ext - Control Custom Posting Description ARLEM - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1633892545 - Action 1462604466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Report Arlem Builder Manage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order Ext - Action ReportBuilderManage - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1633892545 - Action 922191573 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
           <source>Wizard Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -587,6 +597,11 @@
           <source>Lunch Vendor Nos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Lunch Vendor Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2266262807 - Control 1096762043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Report Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesSetupPageExt - Control Report Arlem - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4121073707 - Control 1175034628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Lunch Vendor</source>
@@ -667,6 +682,11 @@
           <source>Lunch Vendor Nos.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesSetupExt - Field Lunch Vendor Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 666563314 - Field 1096762043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Report Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesSetupExt - Field Report Arlem - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2378683151 - Field 1175034628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1936001480">
           <source>Lunch Vendor</source>

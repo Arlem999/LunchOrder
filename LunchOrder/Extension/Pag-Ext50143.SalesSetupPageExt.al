@@ -18,5 +18,14 @@ pageextension 50143 SalesSetupPageExt extends "Sales & Receivables Setup"
                 Caption = 'Lunch Vendor Nos.';
             }
         }
+
+        addafter("Freight G/L Acc. No.")
+        {
+            field("Report Arlem"; "Report Arlem")
+            {
+                Caption = 'Report Arlem';
+                ApplicationArea = All;
+            }
+        }
     }
 }

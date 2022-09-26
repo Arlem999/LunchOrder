@@ -31,6 +31,16 @@ pageextension 50102 "Sales Order Ext" extends "Sales Order"
                 RunObject = page "Custom Posting Arlem";
                 RunPageLink = "No." = field("No.");
             }
+
+            action("ReportBuilderManage")
+            {
+                ApplicationArea = all;
+                Caption = 'Report Arlem Builder Manage';
+                Image = Report2;
+                Promoted = true;
+                RunObject = report "ReportBuilderManage";
+                //  RunPageLink = "No." = FIELD("No.");
+            }
         }
     }
 }
