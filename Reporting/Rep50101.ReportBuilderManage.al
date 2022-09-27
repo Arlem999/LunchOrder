@@ -10,26 +10,55 @@ report 50101 ReportBuilderManage
         dataitem(Sales_Header; "Sales Header")
         {
             DataItemTableView = SORTING("No.");
-
-            dataitem(Customer; Customer)
+            RequestFilterFields = "No.";
+            dataitem(SalesLine; "Sales Line")
             {
-                DataItemTableView = sorting("No.");
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.");
 
                 trigger OnPostDataItem()
                 begin
-                    FillHeader();
                     FillLine();
                     FillFooter();
-                    ExportData();
+                end;
+
+                trigger OnPreDataItem()
+                begin
+                    FillHeader();
                 end;
             }
         }
     }
+    requestpage
+    {
+        layout
+        {
+            area(content)
+            {
+                group("Order No.: ")
+                {
+                    field("Order No."; Sales_Header."No.")
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    trigger OnPreReport()
+    begin
+        InitReportTemplate();
+    end;
+
+    trigger OnPostReport()
+    begin
+        ExportData();
+    end;
 
     var
         CompanyInfo: Record "Company Information";
-        SalesLine: Record "Sales Line";
         ExcelReportBuilderManager: Codeunit "Excel Report Builder Manager";
+        Customer: Record Customer;
 
     procedure InitReportTemplate()
     var
@@ -42,15 +71,22 @@ report 50101 ReportBuilderManage
     end;
 
     local procedure FillHeader()
+    var
+        CustomerNo: code[20];
     begin
-        ExcelReportBuilderManager.AddSection('REPORTHEADER');
+        CustomerNo := Sales_Header."Sell-to Customer No.";
+        CompanyInfo.Get();
+        Customer.SetRange("No.", CustomerNo);
+        if Customer.FindFirst() then begin
+            ExcelReportBuilderManager.AddSection('REPORTHEADER');
 
-        ExcelReportBuilderManager.AddDataToSection('Company_Name', CompanyInfo.Name);
-        ExcelReportBuilderManager.AddDataToSection('Address', CompanyInfo.Address);
-        ExcelReportBuilderManager.AddDataToSection('Registration_No', CompanyInfo."Registration No.");
-        ExcelReportBuilderManager.AddDataToSection('Customer_Name', Customer.Name);
-        ExcelReportBuilderManager.AddDataToSection('Ship_to_Code', Customer."Ship-to Code");
-        ExcelReportBuilderManager.AddDataToSection('Mobile_Phone_No.', Customer."Mobile Phone No.");
+            ExcelReportBuilderManager.AddDataToSection('Company_Name', CompanyInfo.Name);
+            ExcelReportBuilderManager.AddDataToSection('Address', CompanyInfo.Address);
+            ExcelReportBuilderManager.AddDataToSection('Registration_No', CompanyInfo."Registration No.");
+            ExcelReportBuilderManager.AddDataToSection('Customer_Name', Customer.Name);
+            ExcelReportBuilderManager.AddDataToSection('Ship_to_Code', Customer."Ship-to Code");
+            ExcelReportBuilderManager.AddDataToSection('Mobile_Phone_No.', Customer."Mobile Phone No.");
+        end;
     end;
 
     local procedure FillLine()
