@@ -16,15 +16,17 @@ report 50101 ReportBuilderManage
                 DataItemLink = "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document No.", "Line No.");
 
-                trigger OnPostDataItem()
-                begin
-                    FillLine();
-                    FillFooter();
-                end;
+                // trigger OnPostDataItem()
+                // begin
+                //     FillLine();
+                //     FillFooter();
+                // end;
 
                 trigger OnPreDataItem()
                 begin
                     FillHeader();
+                    FillLine();
+                    FillFooter();
                 end;
             }
         }

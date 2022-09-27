@@ -238,6 +238,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ConfirmOrder - Method SaveOrder - NamedType ConfirmOrderTxt</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 3726724574" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel is successfully imported.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ExcelImportSucess</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 511806700" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Not Found!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType NoFileFoundMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 1635154260" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please Choose the Excel File: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType UploadMessage</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1459700195 - Method 1407619943 - NamedType 848472796" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sorry, but this item has already been added to the order</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -477,6 +492,16 @@
           <source>Custom ARLEM Posting Description</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Customer Ledger Entries Ext - Control Custom Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3905379818 - Action 792888982 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>Portfolio_Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action Portfolio_Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3905379818 - Action 2615505106 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>Collection_Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action Collection_Arlem - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2049863388 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2854365759">
           <source>Number of lines Arlem</source>
