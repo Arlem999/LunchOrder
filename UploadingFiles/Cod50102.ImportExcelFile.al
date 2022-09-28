@@ -34,10 +34,6 @@ codeunit 50102 ImportExcelFile
         LineNo: Integer;
         MaxRowNo: Integer;
     begin
-        RowNo := 0;
-        ColNo := 0;
-        MaxRowNo := 0;
-        LineNo := 0;
         GenJournal.Reset();
         if GenJournal.FindLast() then
             LineNo := GenJournal."Line No.";
@@ -47,16 +43,19 @@ codeunit 50102 ImportExcelFile
         end;
 
         for RowNo := 2 to MaxRowNo do begin
-            LineNo := LineNo + 10000;
-            GenJournal.Init();
-            // Evaluate(GenJournal."Batch Name", BatchName);
-            // GenJournal."Line No." := LineNo;
-            // Evaluate(GenJournal."Document No.", GetValueAtCell(RowNo, 1));
-            // GenJournal."Sheet Name" := SheetName;
-            // GenJournal."File Name" := FileName;
-            // GenJournal."Imported Date" := Today;
-            // GenJournal."Imported Time" := Time;
-            GenJournal.Insert();
+            if GetValueAtCell(RowNo, 1) <> '' then begin
+                LineNo := LineNo + 10000;
+                GenJournal.Init();
+                GenJournal."Line No." := LineNo;
+                Evaluate(GenJournal."External Document No.", GetValueAtCell(RowNo, 1));
+                Evaluate(GenJournal."Account No.", GetValueAtCell(RowNo, 2));
+                Evaluate(GenJournal."Posting Date", GetValueAtCell(RowNo, 3));
+                Evaluate(GenJournal."Amount (LCY)", GetValueAtCell(RowNo, 4));
+                Evaluate(GenJournal."Shortcut Dimension 1 Code", '000' + (GetValueAtCell(RowNo, 5)) +
+                 '.00' + GetValueAtCell(RowNo, 7) + '.0' + GetValueAtCell(RowNo, 9));
+                GenJournal.Description := GetValueAtCell(RowNo, 11);
+                GenJournal.Insert();
+            end;
         end;
         Message(ExcelImportSucess);
     end;
