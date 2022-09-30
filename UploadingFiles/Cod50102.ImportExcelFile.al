@@ -34,18 +34,20 @@ codeunit 50102 ImportExcelFile
         LineNo: Integer;
         MaxRowNo: Integer;
     begin
-        GenJournal.Reset();
+        TempExcelBuffer.Reset();
+        if TempExcelBuffer.FindLast() then
+            MaxRowNo := TempExcelBuffer."Row No.";
+        GenJournal.SetRange("Journal Template Name", 'GENERAL');
+        GenJournal.SetRange("Journal Batch Name", 'DEFAULT');
         if GenJournal.FindLast() then
             LineNo := GenJournal."Line No.";
-        TempExcelBuffer.Reset();
-        if TempExcelBuffer.FindLast() then begin
-            MaxRowNo := TempExcelBuffer."Row No.";
-        end;
 
         for RowNo := 2 to MaxRowNo do begin
             if GetValueAtCell(RowNo, 1) <> '' then begin
                 LineNo := LineNo + 10000;
                 GenJournal.Init();
+                GenJournal."Journal Template Name" := 'GENERAL';
+                GenJournal."Journal Batch Name" := 'DEFAULT';
                 GenJournal."Line No." := LineNo;
                 Evaluate(GenJournal."External Document No.", GetValueAtCell(RowNo, 1));
                 Evaluate(GenJournal."Account No.", GetValueAtCell(RowNo, 2));

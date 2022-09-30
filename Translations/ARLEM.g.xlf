@@ -238,6 +238,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ConfirmOrder - Method SaveOrder - NamedType ConfirmOrderTxt</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 511806700" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Not Found!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType NoFileFoundMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 940895071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Txt is successfully imported.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType TxtImportSucess</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 1635154260" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please Choose the Txt File: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType UploadMessage</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1418396712 - NamedType 3726724574" size-unit="char" translate="yes" xml:space="preserve">
           <source>Excel is successfully imported.</source>
           <note from="Developer" annotates="general" priority="2"></note>

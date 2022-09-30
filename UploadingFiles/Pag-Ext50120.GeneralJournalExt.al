@@ -38,13 +38,12 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
 
                 trigger OnAction()
                 var
-                    ImportExcelFile: Codeunit ImportExcelFile;
+                    ImportTxtFile: Codeunit "Import Txt File";
                 begin
-                    ImportExcelFile.ReadExelSheet();
-                    ImportExcelFile.ImportExcelData();
+                    ImportTxtFile.ReadTxtFile();
+                    ImportTxtFile.ImportTxtData();
                 end;
             }
         }
     }
-
 }
