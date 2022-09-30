@@ -19,7 +19,7 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                     ImportExcelFile: Codeunit ImportExcelFile;
                 begin
                     ImportExcelFile.ReadExelSheet();
-                    ImportExcelFile.ImportExcelData();
+                    ImportExcelFile.ImportExcelData(Rec);
                 end;
             }
         }
@@ -41,7 +41,7 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                     ImportTxtFile: Codeunit "Import Txt File";
                 begin
                     ImportTxtFile.ReadTxtFile();
-                    ImportTxtFile.ImportTxtData();
+                    ImportTxtFile.ImportTxtData(Rec);
                 end;
             }
         }

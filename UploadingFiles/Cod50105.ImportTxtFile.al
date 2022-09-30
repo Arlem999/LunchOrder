@@ -25,33 +25,36 @@ codeunit 50105 "Import Txt File"
             Message(NoFileFoundMsg);
     end;
 
-    procedure ImportTxtData()
+    procedure ImportTxtData(Rec: Record "Gen. Journal Line")
     var
         GenJournal: Record "Gen. Journal Line";
-        PostDate: Text;
+        PostDateTxt: Text;
+        PostDate: Date;
         AmountLCY: Decimal;
+        Amount: Decimal;
         LineNo: Integer;
         DbAcCl: Text; // GenJournal."Account Type"
         CrAcCl: Text;
         CrAcNo: Text; // GenJournal."Account No."
         DbAcNo: Text;
     begin
-        GenJournal.SetRange("Journal Template Name", 'GENERAL');
-        GenJournal.SetRange("Journal Batch Name", 'DEFAULT');
+        GenJournal.SetRange("Journal Template Name", Rec."Journal Template Name");
+        GenJournal.SetRange("Journal Batch Name", Rec."Journal Batch Name");
         if GenJournal.FindLast() then
             LineNo := GenJournal."Line No.";
 
         foreach LineTxt in StackOfTxt do begin
             LineNo := LineNo + 10000;
             GenJournal.Init();
-            GenJournal."Journal Template Name" := 'GENERAL';
-            GenJournal."Journal Batch Name" := 'DEFAULT';
-            GenJournal."Line No." := LineNo;
-            GenJournal."Document No." := ParsingString();
-            PostDate := ParsingString();
-            Evaluate(GenJournal."Posting Date", COPYSTR(PostDate, 1, 4) + '-' + COPYSTR(PostDate, 5, 2) + '-' + COPYSTR(PostDate, 7, 2));
+            GenJournal.Validate("Journal Template Name", Rec."Journal Template Name");
+            GenJournal.Validate("Journal Batch Name", Rec."Journal Batch Name");
+            GenJournal.Validate("Line No.", LineNo);
+            GenJournal.Validate("Document No.", ParsingString());
+            PostDateTxt := ParsingString();
+            Evaluate(PostDate, COPYSTR(PostDateTxt, 1, 4) + '-' + COPYSTR(PostDateTxt, 5, 2) + '-' + COPYSTR(PostDateTxt, 7, 2));
+            GenJournal.Validate("Posting Date", PostDate);
             SkipLine(1);
-            GenJournal.Description := ParsingString();
+            GenJournal.Validate(Description, ParsingString());
             DbAcCl := ParsingString();
             DbAcNo := ParsingString();
             SkipLine(1);
@@ -61,43 +64,43 @@ codeunit 50105 "Import Txt File"
 
             if DbAcCl = '0' then begin
                 if CrAcCl = '1' then begin
-                    GenJournal."Account Type" := GenJournal."Account Type"::Customer;
-                    GenJournal."Account No." := Format(CrAcNo);
+                    GenJournal.Validate("Account Type", GenJournal."Account Type"::Customer);
+                    GenJournal.Validate("Account No.", Format(CrAcNo));
                 end else
                     if CrAcCl = '2' then begin
-                        GenJournal."Account Type" := GenJournal."Account Type"::Vendor;
-                        GenJournal."Account No." := Format(CrAcNo);
+                        GenJournal.Validate("Account Type", GenJournal."Account Type"::Vendor);
+                        GenJournal.Validate("Account No.", Format(CrAcNo));
                     end else
                         if CrAcCl = '3' then begin
-                            GenJournal."Account Type" := GenJournal."Account Type"::"G/L Account";
-                            GenJournal."Account No." := Format(CrAcNo);
+                            GenJournal.Validate("Account Type", GenJournal."Account Type"::"G/L Account");
+                            GenJournal.Validate("Account No.", Format(CrAcNo));
                         end
             end else
                 if DbAcCl = '1' then begin
-                    GenJournal."Account Type" := GenJournal."Account Type"::Customer;
-                    GenJournal."Account No." := Format(DbAcNo);
+                    GenJournal.Validate("Account Type", GenJournal."Account Type"::Customer);
+                    GenJournal.Validate("Account No.", Format(DbAcNo));
                 end else
                     if DbAcCl = '2' then begin
-                        GenJournal."Account Type" := GenJournal."Account Type"::Vendor;
-                        GenJournal."Account No." := Format(DbAcNo);
+                        GenJournal.Validate("Account Type", GenJournal."Account Type"::Vendor);
+                        GenJournal.Validate("Account No.", Format(DbAcNo));
                     end else
                         if DbAcCl = '3' then begin
-                            GenJournal."Account Type" := GenJournal."Account Type"::"G/L Account";
-                            GenJournal."Account No." := Format(DbAcNo);
+                            GenJournal.Validate("Account Type", GenJournal."Account Type"::"G/L Account");
+                            GenJournal.Validate("Account No.", Format(DbAcNo));
                         end;
 
-            GenJournal."Currency Code" := Format(ParsingString());
+            GenJournal.Validate("Currency Code", Format(ParsingString()));
             SkipLine(1);
-            Evaluate(GenJournal.Amount, Format(ParsingString()));
-
+            Evaluate(Amount, Format(ParsingString()));
+            GenJournal.Validate(Amount, Amount);
             Evaluate(AmountLCY, ParsingString());
             if (DbAcCl = '0') then
-                GenJournal."Amount (LCY)" := (-1) * AmountLCY
+                GenJournal.Validate("Amount (LCY)", (-1) * AmountLCY)
             else
-                GenJournal."Amount (LCY)" := AmountLCY;
+                GenJournal.Validate("Amount (LCY)", AmountLCY);
 
             SkipLine(3);
-            GenJournal."External Document No." := ParsingString;
+            GenJournal.Validate("External Document No.", ParsingString);
 
             GenJournal.Insert();
         end;

@@ -26,19 +26,24 @@ codeunit 50102 ImportExcelFile
         TempExcelBuffer.ReadSheet();
     end;
 
-    procedure ImportExcelData()
+    procedure ImportExcelData(Rec: Record "Gen. Journal Line")
     var
         GenJournal: Record "Gen. Journal Line";
         RowNo: Integer;
         ColNo: Integer;
         LineNo: Integer;
         MaxRowNo: Integer;
+        ExternalDocumentNo: Code[35];
+        AccountNo: Code[35];
+        PostingDate: Date;
+        AmountLCY: Decimal;
+        ShortcutDimension1Code: Code[20];
     begin
         TempExcelBuffer.Reset();
         if TempExcelBuffer.FindLast() then
             MaxRowNo := TempExcelBuffer."Row No.";
-        GenJournal.SetRange("Journal Template Name", 'GENERAL');
-        GenJournal.SetRange("Journal Batch Name", 'DEFAULT');
+        GenJournal.SetRange("Journal Template Name", Rec."Journal Template Name");
+        GenJournal.SetRange("Journal Batch Name", Rec."Journal Batch Name");
         if GenJournal.FindLast() then
             LineNo := GenJournal."Line No.";
 
@@ -46,16 +51,21 @@ codeunit 50102 ImportExcelFile
             if GetValueAtCell(RowNo, 1) <> '' then begin
                 LineNo := LineNo + 10000;
                 GenJournal.Init();
-                GenJournal."Journal Template Name" := 'GENERAL';
-                GenJournal."Journal Batch Name" := 'DEFAULT';
-                GenJournal."Line No." := LineNo;
-                Evaluate(GenJournal."External Document No.", GetValueAtCell(RowNo, 1));
-                Evaluate(GenJournal."Account No.", GetValueAtCell(RowNo, 2));
-                Evaluate(GenJournal."Posting Date", GetValueAtCell(RowNo, 3));
-                Evaluate(GenJournal."Amount (LCY)", GetValueAtCell(RowNo, 4));
-                Evaluate(GenJournal."Shortcut Dimension 1 Code", '000' + (GetValueAtCell(RowNo, 5)) +
+                GenJournal.Validate("Journal Template Name", Rec."Journal Template Name");
+                GenJournal.Validate("Journal Batch Name", Rec."Journal Batch Name");
+                GenJournal.Validate("Line No.", LineNo);
+                Evaluate(ExternalDocumentNo, GetValueAtCell(RowNo, 1));
+                Evaluate(AccountNo, GetValueAtCell(RowNo, 2));
+                Evaluate(PostingDate, GetValueAtCell(RowNo, 3));
+                Evaluate(AmountLCY, GetValueAtCell(RowNo, 4));
+                Evaluate(ShortcutDimension1Code, '000' + (GetValueAtCell(RowNo, 5)) +
                  '.00' + GetValueAtCell(RowNo, 7) + '.0' + GetValueAtCell(RowNo, 9));
-                GenJournal.Description := GetValueAtCell(RowNo, 11);
+                GenJournal.Validate("External Document No.", ExternalDocumentNo);
+                GenJournal.Validate("Account No.", AccountNo);
+                GenJournal.Validate("Posting Date", PostingDate);
+                GenJournal.Validate("Amount (LCY)", AmountLCY);
+                GenJournal.Validate("Shortcut Dimension 1 Code", ShortcutDimension1Code);
+                GenJournal.Validate(Description, GetValueAtCell(RowNo, 11));
                 GenJournal.Insert();
             end;
         end;
