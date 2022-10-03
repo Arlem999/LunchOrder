@@ -238,6 +238,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ConfirmOrder - Method SaveOrder - NamedType ConfirmOrderTxt</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 1317599060" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The field Account No. of table Gen. Journal Line cannot be found in the related table (G/L Account).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorAccountNo</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 1697918833" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, we cant insert this Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorInsert</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 2763291245" size-unit="char" translate="yes" xml:space="preserve">
+          <source>- This Field not pass validation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorMessage</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3148223237 - NamedType 511806700" size-unit="char" translate="yes" xml:space="preserve">
           <source>File Not Found!</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -252,6 +267,21 @@
           <source>Please Choose the Txt File: </source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType UploadMessage</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 1317599060" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The field Account No. of table Gen. Journal Line cannot be found in the related table (G/L Account).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorAccountNo</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 1697918833" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, we cant insert this Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorInsert</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 2763291245" size-unit="char" translate="yes" xml:space="preserve">
+          <source>- This Field not pass validation</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorMessage</note>
         </trans-unit>
         <trans-unit id="Codeunit 1418396712 - NamedType 3726724574" size-unit="char" translate="yes" xml:space="preserve">
           <source>Excel is successfully imported.</source>

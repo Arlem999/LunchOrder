@@ -7,6 +7,10 @@ codeunit 50105 "Import Txt File"
         StackOfTxt: List of [Text];
         StackTxt: Text;
         LineTxt: Text;
+        FldRef: FieldRef;
+        ErrorAccountNo: Label 'The field Account No. of table Gen. Journal Line cannot be found in the related table (G/L Account).';
+        ErrorMessage: Label '- This Field not pass validation';
+        ErrorInsert: Label 'Sorry, we cant insert this Line';
 
     procedure ReadTxtFile()
     var
@@ -28,6 +32,7 @@ codeunit 50105 "Import Txt File"
     procedure ImportTxtData(Rec: Record "Gen. Journal Line")
     var
         GenJournal: Record "Gen. Journal Line";
+        ShowErrors: Codeunit "Show Errors";
         PostDateTxt: Text;
         PostDate: Date;
         AmountLCY: Decimal;
@@ -37,24 +42,48 @@ codeunit 50105 "Import Txt File"
         CrAcCl: Text;
         CrAcNo: Text; // GenJournal."Account No."
         DbAcNo: Text;
+        RecRef: RecordRef;
     begin
         GenJournal.SetRange("Journal Template Name", Rec."Journal Template Name");
         GenJournal.SetRange("Journal Batch Name", Rec."Journal Batch Name");
         if GenJournal.FindLast() then
             LineNo := GenJournal."Line No.";
 
+        RecRef.Open(Database::"Gen. Journal Line");
+
         foreach LineTxt in StackOfTxt do begin
             LineNo := LineNo + 10000;
             GenJournal.Init();
             GenJournal.Validate("Journal Template Name", Rec."Journal Template Name");
             GenJournal.Validate("Journal Batch Name", Rec."Journal Batch Name");
-            GenJournal.Validate("Line No.", LineNo);
-            GenJournal.Validate("Document No.", ParsingString());
+            // GenJournal.Validate("Line No.", LineNo);
+            FldRef := RecRef.Field(Rec.FieldNo("Line No."));
+            if ValidateField(FldRef, LineNo) then
+                GenJournal.Validate("Line No.", LineNo)
+            else
+                Error(ErrorInfo.Create(Format(Rec."Line No.") + ErrorMessage, true, Rec, Rec.FieldNo("Account No.")));
+
+            //  GenJournal.Validate("Document No.", ParsingString());
+            FldRef := RecRef.Field(Rec.FieldNo("Line No."));
+            if ValidateField(FldRef, LineNo) then
+                GenJournal.Validate("Line No.", LineNo)
+            else
+                Error(ErrorInfo.Create(Format(Rec."Line No.") + ErrorMessage, true, Rec, Rec.FieldNo("Account No.")));
             PostDateTxt := ParsingString();
             Evaluate(PostDate, COPYSTR(PostDateTxt, 1, 4) + '-' + COPYSTR(PostDateTxt, 5, 2) + '-' + COPYSTR(PostDateTxt, 7, 2));
-            GenJournal.Validate("Posting Date", PostDate);
+            // GenJournal.Validate("Posting Date", PostDate);
+            FldRef := RecRef.Field(Rec.FieldNo("Line No."));
+            if ValidateField(FldRef, LineNo) then
+                GenJournal.Validate("Line No.", LineNo)
+            else
+                Error(ErrorInfo.Create(Format(Rec."Line No.") + ErrorMessage, true, Rec, Rec.FieldNo("Account No.")));
             SkipLine(1);
-            GenJournal.Validate(Description, ParsingString());
+            // GenJournal.Validate(Description, ParsingString());
+            FldRef := RecRef.Field(Rec.FieldNo("Line No."));
+            if ValidateField(FldRef, LineNo) then
+                GenJournal.Validate("Line No.", LineNo)
+            else
+                Error(ErrorInfo.Create(Format(Rec."Line No.") + ErrorMessage, true, Rec, Rec.FieldNo("Account No.")));
             DbAcCl := ParsingString();
             DbAcNo := ParsingString();
             SkipLine(1);
@@ -89,10 +118,20 @@ codeunit 50105 "Import Txt File"
                             GenJournal.Validate("Account No.", Format(DbAcNo));
                         end;
 
-            GenJournal.Validate("Currency Code", Format(ParsingString()));
+            // GenJournal.Validate("Currency Code", Format(ParsingString()));
+            FldRef := RecRef.Field(Rec.FieldNo("Line No."));
+            if ValidateField(FldRef, LineNo) then
+                GenJournal.Validate("Line No.", LineNo)
+            else
+                Error(ErrorInfo.Create(Format(Rec."Line No.") + ErrorMessage, true, Rec, Rec.FieldNo("Account No.")));
             SkipLine(1);
             Evaluate(Amount, Format(ParsingString()));
-            GenJournal.Validate(Amount, Amount);
+            // GenJournal.Validate(Amount, Amount);
+            FldRef := RecRef.Field(Rec.FieldNo("Line No."));
+            if ValidateField(FldRef, LineNo) then
+                GenJournal.Validate("Line No.", LineNo)
+            else
+                Error(ErrorInfo.Create(Format(Rec."Line No.") + ErrorMessage, true, Rec, Rec.FieldNo("Account No.")));
             Evaluate(AmountLCY, ParsingString());
             if (DbAcCl = '0') then
                 GenJournal.Validate("Amount (LCY)", (-1) * AmountLCY)
@@ -100,9 +139,15 @@ codeunit 50105 "Import Txt File"
                 GenJournal.Validate("Amount (LCY)", AmountLCY);
 
             SkipLine(3);
-            GenJournal.Validate("External Document No.", ParsingString);
+            // GenJournal.Validate("External Document No.", ParsingString);
+            FldRef := RecRef.Field(Rec.FieldNo("Line No."));
+            if ValidateField(FldRef, LineNo) then
+                GenJournal.Validate("Line No.", LineNo)
+            else
+                Error(ErrorInfo.Create(Format(Rec."Line No.") + ErrorMessage, true, Rec, Rec.FieldNo("Account No.")));
 
-            GenJournal.Insert();
+            If not GenJournal.Insert() then
+                Error(ErrorInfo.Create(ErrorInsert, true, Rec, Rec.FieldNo("Account No.")));
         end;
         Message(TxtImportSucess);
     end;
@@ -127,5 +172,11 @@ codeunit 50105 "Import Txt File"
     begin
         For Cycle := 1 TO QuantityOfLine do
             ParsingString();
+    end;
+
+    [TryFunction]
+    local procedure ValidateField(var FldRef: FieldRef; NewValue: Variant)
+    begin
+        FldRef.Validate(NewValue);
     end;
 }
