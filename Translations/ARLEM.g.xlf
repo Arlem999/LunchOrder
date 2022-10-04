@@ -298,6 +298,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType UploadMessage</note>
         </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 1635154260" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please Choose the CSV File: </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType UploadMessage</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 459573375 - Method 1473410462 - NamedType 2922669919" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File not found!</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - Method ReadCSVFile - NamedType FileNotFound</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1418396712 - NamedType 1317599060" size-unit="char" translate="yes" xml:space="preserve">
           <source>The field Account No. of table Gen. Journal Line cannot be found in the related table (G/L Account).</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -603,6 +613,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action Collection_Arlem - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3905379818 - Action 71119409 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>Expensify_upload_Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action Expensify_Upload_Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3905379818 - Control 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>Receipt</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Control Receipt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3905379818 - Control 939341361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>Reimbursable</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Control Reimbursable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2391863660 - Control 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+          <source>Receipt Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Ledger Entries Ext - Control Receipt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2391863660 - Control 939341361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+          <source>Reimbursable Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Ledger Entries Ext - Control Reimbursable - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2049863388 - Control 729053812 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2854365759">
           <source>Number of lines Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -733,10 +768,40 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Card Ext - Control Lunch Vendor - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3152102566 - Control 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1567633909">
+          <source>Receipt Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Ledger Entries Ext - Control Receipt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3152102566 - Control 939341361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1567633909">
+          <source>Reimbursable Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Vendor Ledger Entries Ext - Control Reimbursable - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1183321529 - Field 3044329067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2733917450">
           <source>Posting Description ARLEM</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Cust. Ledger Entry Ext - Field Posting Description ARLEM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 71500435 - Field 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Receipt Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Ext - Field Receipt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 71500435 - Field 939341361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Reimbursable Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension G/L Entry Ext - Field Reimbursable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2502354840 - Field 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Receipt Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gen. Journal Line Ext - Field Receipt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2502354840 - Field 939341361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Reimbursable Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Gen. Journal Line Ext - Field Reimbursable - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 729837370 - Field 2777476369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
           <source>Number of lines</source>
@@ -817,6 +882,16 @@
           <source>Lunch Vendor</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Vendor Extension - Field Lunch Vendor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1225766744 - Field 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 406314583">
+          <source>Receipt Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Vendor Ledger Entry Ext - Field Receipt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1225766744 - Field 939341361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 406314583">
+          <source>Reimbursable Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Vendor Ledger Entry Ext - Field Reimbursable - Property Caption</note>
         </trans-unit>
       </group>
     </body>
