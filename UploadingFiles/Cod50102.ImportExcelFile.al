@@ -9,8 +9,13 @@ codeunit 50102 ImportExcelFile
         SheetName: Text;
         FldRef: FieldRef;
         ErrorAccountNo: Label 'The field Account No. of table Gen. Journal Line cannot be found in the related table (G/L Account).';
-        ErrorMessage: Label '- This Field not pass validation';
+        ErrorDescription: Label 'The length of the description must be less than or equal to 100 characters';
+        ErrorDimension: Label 'There is no such value in Dimension Values.';
+        ErrorAmount: Label 'The field Amount of table Gen. Journal Line cannot be 0 or empty.';
         ErrorInsert: Label 'Sorry, we cant insert this Line';
+        ErrorPostingDate: Label 'Sorry, you entered the wrong date';
+        ErrorLineNo: Label 'Something went wrong, please try again';
+        ErrorExternalDocumentNo: Label 'The field External Document No cannot be 0 or empty';
 
     procedure ReadExelSheet()
     var
@@ -67,7 +72,7 @@ codeunit 50102 ImportExcelFile
                 if ValidateField(FldRef, LineNo) then
                     GenJournal.Validate("Line No.", LineNo)
                 else
-                    Error(ErrorInfo.Create('Format(Rec."Line No.") + ErrorMessage', true, Rec, Rec.FieldNo("Account No.")));
+                    Error(ErrorInfo.Create(ErrorLineNo, true, Rec, Rec.FieldNo("Account No.")));
 
                 Evaluate(ExternalDocumentNo, GetValueAtCell(RowNo, 1));
                 Evaluate(AccountNo, GetValueAtCell(RowNo, 2));
@@ -80,45 +85,45 @@ codeunit 50102 ImportExcelFile
                 if ValidateField(FldRef, ExternalDocumentNo) then
                     GenJournal.Validate(Description, ExternalDocumentNo)
                 else
-                    Error(ErrorInfo.Create('Rec."External Document No." + ErrorMessage', true, Rec, Rec.FieldNo("Account No.")));
+                    Error(ErrorInfo.Create(ErrorExternalDocumentNo, true, Rec, Rec.FieldNo("Account No.")));
 
-                // FldRef := RecRef.Field(Rec.FieldNo("Account No."));
-                // if ValidateField(FldRef, AccountNo) then
-                //     GenJournal.Validate("Account No.", AccountNo)
-                // else
-                //     Error(ErrorInfo.Create(ErrorAccountNo, true, Rec, Rec.FieldNo("Account No.")));
+                FldRef := RecRef.Field(Rec.FieldNo("Account No."));
+                if ValidateField(FldRef, AccountNo) then
+                    GenJournal.Validate("Account No.", AccountNo)
+                else
+                    Error(ErrorInfo.Create(ErrorAccountNo, true, Rec, Rec.FieldNo("Account No.")));
 
                 FldRef := RecRef.Field(Rec.FieldNo("Posting Date"));
                 if ValidateField(FldRef, PostingDate) then
                     GenJournal.Validate("Posting Date", PostingDate)
                 else
-                    Error(ErrorInfo.Create('Format(Rec."Posting Date") + ErrorMessage', true, Rec, Rec.FieldNo("Account No.")));
+                    Error(ErrorInfo.Create(ErrorPostingDate, true, Rec, Rec.FieldNo("Account No.")));
 
                 FldRef := RecRef.Field(Rec.FieldNo("Amount (LCY)"));
                 if ValidateField(FldRef, AmountLCY) then
                     GenJournal.Validate("Amount (LCY)", AmountLCY)
                 else
-                    Error(ErrorInfo.Create('Format(Rec."Amount (LCY)") + ErrorMessage', true, Rec, Rec.FieldNo("Account No.")));
+                    Error(ErrorInfo.Create(ErrorAmount, true, Rec, Rec.FieldNo("Account No.")));
 
                 FldRef := RecRef.Field(Rec.FieldNo("Shortcut Dimension 1 Code"));
                 if ValidateField(FldRef, ShortcutDimension1Code) then
                     GenJournal.Validate("Shortcut Dimension 1 Code", ShortcutDimension1Code)
                 else
-                    Error(ErrorInfo.Create('Rec."Shortcut Dimension 1 Code" + ErrorMessage', true, Rec, Rec.FieldNo("Account No.")));
+                    Error(ErrorInfo.Create(ErrorDimension, true, Rec, Rec.FieldNo("Account No.")));
 
                 FldRef := RecRef.Field(Rec.FieldNo(Description));
                 if ValidateField(FldRef, GetValueAtCell(RowNo, 11)) then
                     GenJournal.Validate(Description, GetValueAtCell(RowNo, 11))
                 else
-                    Error(ErrorInfo.Create('Rec.Description + ErrorMessage', true, Rec, Rec.FieldNo("Account No.")));
+                    Error(ErrorInfo.Create(ErrorDescription, true, Rec, Rec.FieldNo("Account No.")));
 
                 If not GenJournal.Insert() then
-                    Error(ErrorInfo.Create('ErrorInsert', true, Rec, Rec.FieldNo("Account No.")));
+                    Error(ErrorInfo.Create(ErrorInsert, true, Rec, Rec.FieldNo("Account No.")));
             end;
-
-            ShowErrors.ShowErrors(GetCollectedErrors(), Rec.RecordId);
         end;
-        Message(ExcelImportSucess);
+        If not HasCollectedErrors then
+            Message(ExcelImportSucess);
+        ShowErrors.ShowErrors(GetCollectedErrors(), Rec.RecordId);
     end;
 
     local procedure GetValueAtCell(RowNo: Integer; ColNo: Integer): Text

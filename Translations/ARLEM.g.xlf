@@ -243,15 +243,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorAccountNo</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 3288157328" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The field Amount of table Gen. Journal Line cannot be 0 or empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorAmount</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 3275934233" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The field Currency Code of table Gen. Journal Line cannot be found in the related table (Currency)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorCurrency</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 3407236114" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The length of the description must be less than or equal to 100 characters</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorDescription</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 1802584437" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The field External Document No cannot be 0 or empty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorExternalDocumentNo</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3148223237 - NamedType 1697918833" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sorry, we cant insert this Line</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorInsert</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 3161529657" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Something went wrong, please try again</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorLineNo</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3148223237 - NamedType 2763291245" size-unit="char" translate="yes" xml:space="preserve">
           <source>- This Field not pass validation</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorMessage</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3148223237 - NamedType 385727264" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, you entered the wrong date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType ErrorPostingDate</note>
         </trans-unit>
         <trans-unit id="Codeunit 3148223237 - NamedType 511806700" size-unit="char" translate="yes" xml:space="preserve">
           <source>File Not Found!</source>
@@ -273,15 +303,40 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorAccountNo</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 3288157328" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The field Amount of table Gen. Journal Line cannot be 0 or empty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorAmount</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 3407236114" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The length of the description must be less than or equal to 100 characters</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorDescription</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 2767642724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is no such value in Dimension Values.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorDimension</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 1802584437" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The field External Document No cannot be 0 or empty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorExternalDocumentNo</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1418396712 - NamedType 1697918833" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sorry, we cant insert this Line</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorInsert</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1418396712 - NamedType 2763291245" size-unit="char" translate="yes" xml:space="preserve">
-          <source>- This Field not pass validation</source>
+        <trans-unit id="Codeunit 1418396712 - NamedType 3161529657" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Something went wrong, please try again</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorMessage</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorLineNo</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1418396712 - NamedType 385727264" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, you entered the wrong date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportExcelFile - NamedType ErrorPostingDate</note>
         </trans-unit>
         <trans-unit id="Codeunit 1418396712 - NamedType 3726724574" size-unit="char" translate="yes" xml:space="preserve">
           <source>Excel is successfully imported.</source>
