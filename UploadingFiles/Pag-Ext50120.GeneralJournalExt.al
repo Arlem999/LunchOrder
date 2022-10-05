@@ -84,5 +84,19 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                 end;
             }
         }
+        addafter("Reconcile")
+        {
+            action(SMA_Expensify_Integr_Setup)
+            {
+                ApplicationArea = All;
+                Caption = 'SMA_Expensify_Integr_Setup';
+                Image = Setup;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedOnly = true;
+                PromotedIsBig = true;
+                RunObject = Page "SMA Expensify Integr. Setup";
+            }
+        }
     }
 }

@@ -18,12 +18,12 @@ codeunit 50107 ImportCSVFile
     end;
 
     [ErrorBehavior(ErrorBehavior::Collect)]
-    procedure ImportCSVData(Rec: Record "G/L Entry")
+    procedure ImportCSVData(Rec: Record "Gen. Journal Line")
     var
         GenJournal: Record "Gen. Journal Line";
         RowNo: Integer;
         LineNo: Integer;
-        AmountLCY: Decimal;
+        Amount: Decimal;
     begin
         for RowNo := 2 to CSVBufer.GetNumberOfLines() do begin
             LineNo := LineNo + 10000;
@@ -33,17 +33,18 @@ codeunit 50107 ImportCSVFile
             GenJournal.Validate("Line No.", LineNo);
             //  Evaluate(Rec."Posting Date", GetValue(RowNo, 1));
             GenJournal.Validate("External Document No.", GetValue(RowNo, 2));
-            Evaluate(AmountLCY, GetValue(RowNo, 3));
-            GenJournal.Validate("Amount (LCY)", AmountLCY);
+            Evaluate(Amount, GetValue(RowNo, 3));
+            GenJournal.Validate("Amount (LCY)", Amount);
             GenJournal.Validate(Description, GetValue(RowNo, 7));
-            GenJournal.Validate("Reimbursable", GetValue(RowNo, 8));
+            GenJournal.Validate("Reimbursable", TextToBoolean(GetValue(RowNo, 8)));
             GenJournal.Validate("Currency Code", GetValue(RowNo, 9));
-            GenJournal.Validate("Amount", GetValue(RowNo, 10));
+            Evaluate(Amount, GetValue(RowNo, 10));
+            GenJournal.Validate("Amount", Amount);
             GenJournal.Validate("Receipt", GetValue(RowNo, 11));
             GenJournal.Validate("Account Type", Rec."Account Type"::"G/L Account");
             GenJournal.Validate("Bal. Account Type", Rec."Bal. Account Type"::Vendor);
-            GenJournal.Validate("Name",);
-            GenJournal.Validate("Document No.",);
+            // GenJournal.Validate("Name",);
+            // GenJournal.Validate("Document No.",);
             GenJournal.Insert()
         end;
     end;
@@ -54,5 +55,13 @@ codeunit 50107 ImportCSVFile
             exit(CSVBufer.Value.TrimEnd('"').TrimStart('"'))
         else
             exit('')
+    end;
+
+    local procedure TextToBoolean(YesOrNo: text): Boolean
+    begin
+        if YesOrNo <> 'yes' then
+            exit(false)
+        else
+            exit(true)
     end;
 }

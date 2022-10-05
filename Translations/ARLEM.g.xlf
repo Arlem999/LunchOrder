@@ -233,6 +233,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Lunch Order Entry - Field Vendor No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2021585658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SMA Expensify Integr. Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SMA Expensify Integr. Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2021585658 - Field 86474822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Partner User ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SMA Expensify Integr. Setup - Field PartnerUserID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2021585658 - Field 680597747 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Partner User Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SMA Expensify Integr. Setup - Field PartnerUserSecret - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3824892168 - Method 1291906449 - NamedType 3450821688" size-unit="char" translate="yes" xml:space="preserve">
           <source>Confirm the order ?</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -588,6 +603,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Vendor List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2021585658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SMA Expensify Integr. Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2021585658 - Control 86474822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Partner User ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Control PartnerUserID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2021585658 - Control 680597747 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Partner User Secret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Control PartnerUserSecret - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2867928321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Menu For Today</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -617,6 +647,11 @@
           <source>Expensify_upload_Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action Expensify_Upload_Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3905379818 - Action 2436593481 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>SMA_Expensify_Integr_Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action SMA_Expensify_Integr_Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3905379818 - Control 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
           <source>Receipt</source>
