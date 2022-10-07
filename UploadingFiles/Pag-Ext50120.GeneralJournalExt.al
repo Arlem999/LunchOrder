@@ -8,12 +8,12 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
             field(Reimbursable; Rec."Reimbursable")
             {
                 ApplicationArea = All;
-                Caption = 'Reimbursable';
+                Caption = 'Reimbursable Arlem';
             }
             field(Receipt; Rec."Receipt")
             {
                 ApplicationArea = All;
-                Caption = 'Receipt';
+                Caption = 'Receipt Arlem';
             }
         }
     }
@@ -80,22 +80,41 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                     ImportCSVFile: Codeunit ImportCSVFile;
                 begin
                     ImportCSVFile.ReadCSVFile();
-                    //  ImportCSVFile.ImportCSVData(Rec);
+                    ImportCSVFile.ImportCSVData(Rec);
                 end;
             }
         }
-        addafter("Reconcile")
+        addafter("Opening Balance")
         {
             action(SMA_Expensify_Integr_Setup)
             {
                 ApplicationArea = All;
-                Caption = 'SMA_Expensify_Integr_Setup';
+                Caption = 'SMA Expensify Integr Setup Arlem';
                 Image = Setup;
+                RunObject = Page "SMA Expensify Integr. Setup";
+                //  RunPageLink = ;
+            }
+        }
+
+        addafter("Reconcile")
+        {
+            action(Get_API_Expencify_Arlem)
+            {
+                ApplicationArea = All;
+                Caption = 'Get API Expencify Arlem';
+                Image = GetBinContent;
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedOnly = true;
                 PromotedIsBig = true;
-                RunObject = Page "SMA Expensify Integr. Setup";
+
+                trigger OnAction()
+                var
+                    ImportCSVFile: Codeunit ImportCSVFile;
+                begin
+                    ImportCSVFile.ReadCSVFile();
+                    ImportCSVFile.ImportCSVData(Rec);
+                end;
             }
         }
     }

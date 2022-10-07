@@ -8,17 +8,19 @@ page 50103 "SMA Expensify Integr. Setup"
     {
         area(content)
         {
-            group(General)
+            group("Enter a value and click Save")
             {
                 field(PartnerUserID; Rec.PartnerUserID)
                 {
                     ApplicationArea = All;
                     Caption = 'Partner User ID';
+                    Editable = true;
                 }
                 field(PartnerUserSecret; Rec.PartnerUserSecret)
                 {
                     ApplicationArea = All;
                     Caption = 'Partner User Secret';
+                    Editable = true;
                 }
             }
         }
@@ -29,7 +31,16 @@ page 50103 "SMA Expensify Integr. Setup"
         {
             action(Save)
             {
-
+                ApplicationArea = All;
+                Caption = 'Save';
+                Image = Save;
+                InFooterBar = true;
+                trigger OnAction();
+                begin
+                    Rec.Init();
+                    Message('Test');
+                    Rec.Insert();
+                end;
             }
         }
     }

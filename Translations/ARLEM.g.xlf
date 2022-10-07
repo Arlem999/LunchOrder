@@ -618,6 +618,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Control PartnerUserSecret - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2021585658 - Action 3865570867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Action Save - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2867928321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Menu For Today</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -649,17 +654,22 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action Expensify_Upload_Arlem - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3905379818 - Action 2436593481 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
-          <source>SMA_Expensify_Integr_Setup</source>
+          <source>SMA Expensify Integr Setup Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action SMA_Expensify_Integr_Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3905379818 - Action 1841766359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>Get API Expencify Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Action Get_API_Expencify_Arlem - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3905379818 - Control 3081714176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
-          <source>Receipt</source>
+          <source>Receipt Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Control Receipt - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3905379818 - Control 939341361 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
-          <source>Reimbursable</source>
+          <source>Reimbursable Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension General Journal Ext - Control Reimbursable - Property Caption</note>
         </trans-unit>
