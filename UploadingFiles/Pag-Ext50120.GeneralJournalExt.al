@@ -92,7 +92,6 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                 Caption = 'SMA Expensify Integr Setup Arlem';
                 Image = Setup;
                 RunObject = Page "SMA Expensify Integr. Setup";
-                //  RunPageLink = ;
             }
         }
 
@@ -112,7 +111,7 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                 var
                     ImportCSVFile: Codeunit ImportCSVFile;
                 begin
-                    ImportCSVFile.ReadCSVFile();
+                    ImportCSVFile.LoadCSVData();
                     ImportCSVFile.ImportCSVData(Rec);
                 end;
             }
