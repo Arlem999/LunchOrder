@@ -238,6 +238,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table SMA Expensify Integr. Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2021585658 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table SMA Expensify Integr. Setup - Field No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2021585658 - Field 86474822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Partner User ID</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -313,10 +318,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Import Txt File - NamedType UploadMessage</note>
         </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 3162394858" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Web Service call failed (status code %1)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType BadStatusCode</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 2787516006" size-unit="char" translate="yes" xml:space="preserve">
+          <source>requestJobDescription={"type":"download","credentials":{"partnerUserID":"aa_lemeshuk_art_gmail_com", "partnerUserSecret":"cf2aa8cac336e1a27d733a42012b18474a484f7f"},"fileName":"%1","fileSystem":"integrationServer"}</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType DownloadFile</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 1314627980" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sorry, connection to this URL is failed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType ErrorMessageURL</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 435253865" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You need to add SMA Setup first</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType ErrorSetup</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 207664548" size-unit="char" translate="yes" xml:space="preserve">
+          <source>requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "aa_lemeshuk_art_gmail_com", "partnerUserSecret": "cf2aa8cac336e1a27d733a42012b18474a484f7f" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"2022-10-1", } }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType RequestJobDescription</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 3379441404" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&amp;template=&lt;#-- Header --&gt; Report ID,Merchant,Amount,Category,Expense Date &lt;#list reports as report&gt; &lt;#list report.transactionList as expense&gt;${report.reportID},&lt;#t&gt;${expense.merchant},&lt;#t&gt;${(expense.amount/100)?string("0.00")},&lt;#t&gt;${expense.category},&lt;#t&gt;${expense.created}&lt;#lt&gt;&lt;/#list&gt;&lt;/#list&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType Template</note>
+        </trans-unit>
         <trans-unit id="Codeunit 459573375 - NamedType 1635154260" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please Choose the CSV File: </source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType UploadMessage</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 459573375 - NamedType 3003898253" size-unit="char" translate="yes" xml:space="preserve">
+          <source>https://integrations.expensify.com/Integration-Server/ExpensifyIntegrations</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType URL</note>
         </trans-unit>
         <trans-unit id="Codeunit 459573375 - Method 1473410462 - NamedType 2922669919" size-unit="char" translate="yes" xml:space="preserve">
           <source>File not found!</source>
@@ -387,6 +427,26 @@
           <source>Sorry, but this item has already been added to the order</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Lunch Delete And Modify Events - Method OnBeforeModifyEvent - NamedType ErrorTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3880320715 - NamedType 3386072072" size-unit="char" translate="yes" xml:space="preserve">
+          <source>https://data.norges-bank.no/api/data/EXR/B.%1.NOK.SP?format=sdmx-generic-2.1&amp;startPeriod=%2&amp;endPeriod=%2&amp;locale=en</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType ImportExchangeRatesURL</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3880320715 - NamedType 1821330829" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unexpected %1 attribute format.</source>
+          <note from="Developer" annotates="general" priority="2">%1= attribute name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType UnexpectedAttrErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3880320715 - NamedType 1698465700" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unexpected %1 node value.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = node name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType UnexpectedNoteErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3880320715 - NamedType 3444893307" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unexpected XML structure.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType XMLUnexpectedErr</note>
         </trans-unit>
         <trans-unit id="Page 3102238896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Custom Posting Descrip Arlem</source>
@@ -618,10 +678,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Control PartnerUserSecret - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2021585658 - Action 3865570867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Save</source>
+        <trans-unit id="Page 2021585658 - Action 1841766359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Get API Expencify Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Action Save - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Action Get_API_Expencify_Arlem - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2867928321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Menu For Today</source>

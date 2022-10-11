@@ -5,20 +5,25 @@ table 50101 "SMA Expensify Integr. Setup"
 
     fields
     {
-        field(1; PartnerUserID; Integer)
+        field(1; "No."; Integer)
+        {
+            Caption = 'No.';
+            DataClassification = SystemMetadata;
+        }
+        field(2; PartnerUserID; Code[30])
         {
             Caption = 'Partner User ID';
-            DataClassification = ToBeClassified;
+            DataClassification = SystemMetadata;
         }
-        field(2; PartnerUserSecret; Code[30])
+        field(3; PartnerUserSecret; Code[30])
         {
             Caption = 'Partner User Secret';
-            DataClassification = ToBeClassified;
+            DataClassification = SystemMetadata;
         }
     }
     keys
     {
-        key(PK; "PartnerUserID")
+        key(PK; "No.")
         {
             Clustered = true;
         }
