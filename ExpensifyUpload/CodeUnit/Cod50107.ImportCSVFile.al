@@ -3,9 +3,9 @@ codeunit 50107 ImportCSVFile
     var
         CSVBufer: Record "CSV Buffer" temporary;
         ResponseTxt: Text;
-        Template: Label '&template=<#-- Header --> Report ID,Merchant,Amount,Category,Expense Date <#list reports as report> <#list report.transactionList as expense>${report.reportID},<#t>${expense.merchant},<#t>${(expense.amount/100)?string("0.00")},<#t>${expense.category},<#t>${expense.created}<#lt></#list></#list>';
-        RequestJobDescription: Label 'requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "aa_lemeshuk_art_gmail_com", "partnerUserSecret": "cf2aa8cac336e1a27d733a42012b18474a484f7f" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"2022-10-1", } }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}';
-        DownloadFile: Label 'requestJobDescription={"type":"download","credentials":{"partnerUserID":"aa_lemeshuk_art_gmail_com", "partnerUserSecret":"cf2aa8cac336e1a27d733a42012b18474a484f7f"},"fileName":"%1","fileSystem":"integrationServer"}';
+        Template: Label '&template=<#-- Header -->Timestamp,Merchant,Amount,MCC,Category,Tag,Description,Reimbursable,"Original Currency","Original Amount",Receipt,Attendees<#list reports as report><#list report.transactionList as expense>${expense. created},<#t>${expense.merchant},<#t>${(expense.amount/100)?string("0.00")},<#t>${expense.mcc},<#t>${expense.category},<#t>${expense.tag},<#t>${expense.description},<#t>${expense. reimbursable?string("yes", "no")},<#t>${expense. currency},<#t>${(expense.amount/100)?string("0.00")},<#t>${expense. receipt.url},<#t>${expense.attendees.displayName}<#lt></#list></#list>';
+        RequestJobDescription: Label 'requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "%1", "partnerUserSecret": "%2" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"2022-10-1", } }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}';
+        DownloadFile: Label 'requestJobDescription={"type":"download","credentials":{"partnerUserID":"%1", "partnerUserSecret":"%2"},"fileName":"%3","fileSystem":"integrationServer"}';
         UploadMessage: Label 'Please Choose the CSV File: ';
         ErrorSetup: Label 'You need to add SMA Setup first';
         ErrorMessageURL: Label 'Sorry, connection to this URL is failed';
@@ -24,7 +24,7 @@ codeunit 50107 ImportCSVFile
             Message(FileNotFound);
     end;
 
-    procedure ImportCSVData(Rec: Record "Gen. Journal Line")
+    procedure ImportCSVDataFromFile(Rec: Record "Gen. Journal Line")
     var
         GenJournal: Record "Gen. Journal Line";
         Vendor: Record Vendor;
@@ -52,7 +52,6 @@ codeunit 50107 ImportCSVFile
                 GenJournal.Validate("Amount (LCY)", AmountLCY);
             end;
             GenJournal.Validate("Reimbursable", TextToBoolean(GetValue(RowNo, 8)));
-            GenJournal."Currency Code" := GetValue(RowNo, 9);
             if GetValue(RowNo, 10) <> '' then begin
                 Evaluate(Amount, GetValue(RowNo, 10));
                 GenJournal.Validate(Amount, Amount);
@@ -60,11 +59,10 @@ codeunit 50107 ImportCSVFile
             GenJournal.Validate("Receipt", GetValue(RowNo, 11));
             GenJournal.Validate("Account Type", Rec."Account Type"::"G/L Account");
             GenJournal.Validate("Bal. Account Type", Rec."Bal. Account Type"::Vendor);
-            Vendor.SetRange(Name, GetValue(RowNo, 12));
-            If Vendor.FindLast() then
-                GenJournal."Bal. Account No." := Vendor."No.";
+            GenJournal."Bal. Account No." := Vendor.GetVendorNo(DelChr(GetValue(RowNo, 12), '=', ','));
             DocumentNo := GetValue(RowNo, 1).Split(' ').Get(1);
             GenJournal."Document No." := 'EXP' + DelChr(DocumentNo, '=', '-');
+            GenJournal."Currency Code" := GetValue(RowNo, 9);
             GenJournal.Validate(Description, GetValue(RowNo, 7));
             GenJournal.Insert();
         end;
@@ -80,11 +78,12 @@ codeunit 50107 ImportCSVFile
         Content: HttpContent;
         Headers: HttpHeaders;
     begin
-        // if not SetUpLoginPass.Get() then
-        //     Error(ErrorSetup);
+        if not SMASetup.Get() then
+            Error(ErrorSetup);
         Request.Method := 'POST';
         Request.SetRequestUri(URL);
-        Content.WriteFrom(RequestJobDescription + Template);
+        Content.WriteFrom(StrSubstNo(RequestJobDescription, SMASetup.PartnerUserID, SMASetup.PartnerUserSecret)
+         + Template);
         Content.GetHeaders(Headers);
         Headers.Remove('Content-Type');
         Headers.Add('Content-Type', 'application/x-www-form-urlencoded');
@@ -107,27 +106,35 @@ codeunit 50107 ImportCSVFile
         Response: HttpResponseMessage;
         Request: HttpRequestMessage;
         SMASetup: Record "SMA Expensify Integr. Setup";
-        InStream: InStream;
+        CSVStream: InStream;
         Content: HttpContent;
         Headers: HttpHeaders;
     begin
-        // if not SetUpLoginPass.Get() then
-        //     Error(ErrorSetup);
+        if not SMASetup.Get() then
+            Error(ErrorSetup);
         Request.Method := 'POST';
         Request.SetRequestUri(URL);
-        Content.WriteFrom(StrSubstNo(DownloadFile, ResponseTxt));
+        Content.WriteFrom(StrSubstNo(DownloadFile, SMASetup.PartnerUserID, SMASetup.PartnerUserSecret, ResponseTxt));
         Content.GetHeaders(Headers);
         Headers.Remove('Content-Type');
         Headers.Add('Content-Type', 'application/x-www-form-urlencoded');
         Request.Content(Content);
         If Client.Send(Request, Response) then begin
             if Response.IsSuccessStatusCode then begin
-                Response.Content.ReadAs(InStream);
-                CSVBufer.LoadDataFromStream(InStream, ',');
+                Response.Content.ReadAs(CSVStream);
+                CSVBufer.LoadDataFromStream(CSVStream, ',');
+                Message(Format(CSVBufer.GetNumberOfLines()));
             end else
                 Error(BadStatusCode, Response.HttpStatusCode);
         end else
             Error(ErrorMessageURL);
+    end;
+
+    local procedure MyProcedure()
+    var
+        myInt: Integer;
+    begin
+
     end;
 
     local procedure GetValue(RowNo: Integer; ColNo: Integer): Text
