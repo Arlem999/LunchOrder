@@ -324,7 +324,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType BadStatusCode</note>
         </trans-unit>
         <trans-unit id="Codeunit 459573375 - NamedType 2787516006" size-unit="char" translate="yes" xml:space="preserve">
-          <source>requestJobDescription={"type":"download","credentials":{"partnerUserID":"aa_lemeshuk_art_gmail_com", "partnerUserSecret":"cf2aa8cac336e1a27d733a42012b18474a484f7f"},"fileName":"%1","fileSystem":"integrationServer"}</source>
+          <source>requestJobDescription={"type":"download","credentials":{"partnerUserID":"%1", "partnerUserSecret":"%2"},"fileName":"%3","fileSystem":"integrationServer"}</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType DownloadFile</note>
         </trans-unit>
@@ -339,12 +339,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType ErrorSetup</note>
         </trans-unit>
         <trans-unit id="Codeunit 459573375 - NamedType 207664548" size-unit="char" translate="yes" xml:space="preserve">
-          <source>requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "aa_lemeshuk_art_gmail_com", "partnerUserSecret": "cf2aa8cac336e1a27d733a42012b18474a484f7f" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"2022-10-1", } }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}</source>
+          <source>requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "%1", "partnerUserSecret": "%2" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"2022-10-1", } }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType RequestJobDescription</note>
         </trans-unit>
         <trans-unit id="Codeunit 459573375 - NamedType 3379441404" size-unit="char" translate="yes" xml:space="preserve">
-          <source>&amp;template=&lt;#-- Header --&gt; Report ID,Merchant,Amount,Category,Expense Date &lt;#list reports as report&gt; &lt;#list report.transactionList as expense&gt;${report.reportID},&lt;#t&gt;${expense.merchant},&lt;#t&gt;${(expense.amount/100)?string("0.00")},&lt;#t&gt;${expense.category},&lt;#t&gt;${expense.created}&lt;#lt&gt;&lt;/#list&gt;&lt;/#list&gt;</source>
+          <source>&amp;template=&lt;#-- Header --&gt;Timestamp,Merchant,Amount,MCC,Category,Tag,Description,Reimbursable,"Original Currency","Original Amount",Receipt,Attendees&lt;#list reports as report&gt;&lt;#list report.transactionList as expense&gt;${expense. created},&lt;#t&gt;${expense.merchant},&lt;#t&gt;${(expense.amount/100)?string("0.00")},&lt;#t&gt;${expense.mcc},&lt;#t&gt;${expense.category},&lt;#t&gt;${expense.tag},&lt;#t&gt;${expense.description},&lt;#t&gt;${expense. reimbursable?string("yes", "no")},&lt;#t&gt;${expense. currency},&lt;#t&gt;${(expense.amount/100)?string("0.00")},&lt;#t&gt;${expense. receipt.url},&lt;#t&gt;${expense.attendees.displayName}&lt;#lt&gt;&lt;/#list&gt;&lt;/#list&gt;</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType Template</note>
         </trans-unit>
@@ -664,7 +664,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Lunch Vendor List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2021585658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>SMA Expensify Integr. Setup</source>
+          <source>SMA Expensify Integr. Setup Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page SMA Expensify Integr. Setup - Property Caption</note>
         </trans-unit>
@@ -692,6 +692,11 @@
           <source>ReportBuilderManage</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report ReportBuilderManage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3664626503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SMA Expensify Report Arlem</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SMA Expensify Report Arlem - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1467278014 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
           <source>Custom ARLEM Posting Description</source>

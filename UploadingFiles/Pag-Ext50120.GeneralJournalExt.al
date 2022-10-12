@@ -80,7 +80,7 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                     ImportCSVFile: Codeunit ImportCSVFile;
                 begin
                     ImportCSVFile.ReadCSVFile();
-                    ImportCSVFile.ImportCSVData(Rec);
+                    ImportCSVFile.ImportCSVDataFromFile(Rec);
                 end;
             }
         }
@@ -112,7 +112,7 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                     ImportCSVFile: Codeunit ImportCSVFile;
                 begin
                     ImportCSVFile.LoadCSVData();
-                    ImportCSVFile.ImportCSVData(Rec);
+                    // ImportCSVFile.ImportCSVDataFromAPI(Rec);
                 end;
             }
         }
