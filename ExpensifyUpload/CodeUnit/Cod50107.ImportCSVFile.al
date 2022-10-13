@@ -4,7 +4,7 @@ codeunit 50107 ImportCSVFile
         CSVBufer: Record "CSV Buffer" temporary;
         ResponseTxt: Text;
         Template: Label '&template=<#-- Header -->Timestamp,Merchant,Amount,MCC,Category,Tag,Description,Reimbursable,"Original Currency","Original Amount",Receipt,Attendees<#list reports as report><#list report.transactionList as expense>${expense. created},<#t>${expense.merchant},<#t>${(expense.amount/100)?string("0.00")},<#t>${expense.mcc},<#t>${expense.category},<#t>${expense.tag},<#t>${expense.description},<#t>${expense. reimbursable?string("yes", "no")},<#t>${expense. currency},<#t>${(expense.amount/100)?string("0.00")},<#t>${expense. receipt.url},<#t>${expense.attendees.displayName}<#lt></#list></#list>';
-        RequestJobDescription: Label 'requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "%1", "partnerUserSecret": "%2" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"2022-10-1", } }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}';
+        RequestJobDescription: Label 'requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "%1", "partnerUserSecret": "%2" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"%3", "endDate":"%4"} }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}';
         DownloadFile: Label 'requestJobDescription={"type":"download","credentials":{"partnerUserID":"%1", "partnerUserSecret":"%2"},"fileName":"%3","fileSystem":"integrationServer"}';
         UploadMessage: Label 'Please Choose the CSV File: ';
         ErrorSetup: Label 'You need to add SMA Setup first';
@@ -24,7 +24,7 @@ codeunit 50107 ImportCSVFile
             Message(FileNotFound);
     end;
 
-    procedure ImportCSVDataFromFile(Rec: Record "Gen. Journal Line")
+    procedure ImportCSVDataFromFile(TemplateName: Code[10]; BatchName: Code[10])
     var
         GenJournal: Record "Gen. Journal Line";
         Vendor: Record Vendor;
@@ -34,16 +34,16 @@ codeunit 50107 ImportCSVFile
         AmountLCY: Decimal;
         DocumentNo: Text;
     begin
-        GenJournal.SetRange("Journal Template Name", Rec."Journal Template Name");
-        GenJournal.SetRange("Journal Batch Name", Rec."Journal Batch Name");
+        GenJournal.SetRange("Journal Template Name", TemplateName);
+        GenJournal.SetRange("Journal Batch Name", BatchName);
         if GenJournal.FindLast() then
             LineNo := GenJournal."Line No.";
 
         for RowNo := 2 to CSVBufer.GetNumberOfLines() do begin
             LineNo := LineNo + 10000;
             GenJournal.Init();
-            GenJournal.Validate("Journal Template Name", Rec."Journal Template Name");
-            GenJournal.Validate("Journal Batch Name", Rec."Journal Batch Name");
+            GenJournal.Validate("Journal Template Name", TemplateName);
+            GenJournal.Validate("Journal Batch Name", BatchName);
             GenJournal.Validate("Line No.", LineNo);
             Evaluate(GenJournal."Posting Date", GetValue(RowNo, 1).Split(' ').Get(1));
             GenJournal.Validate("External Document No.", GetValue(RowNo, 2));
@@ -57,8 +57,8 @@ codeunit 50107 ImportCSVFile
                 GenJournal.Validate(Amount, Amount);
             end;
             GenJournal.Validate("Receipt", GetValue(RowNo, 11));
-            GenJournal.Validate("Account Type", Rec."Account Type"::"G/L Account");
-            GenJournal.Validate("Bal. Account Type", Rec."Bal. Account Type"::Vendor);
+            GenJournal.Validate("Account Type", GenJournal."Account Type"::"G/L Account");
+            GenJournal.Validate("Bal. Account Type", GenJournal."Bal. Account Type"::Vendor);
             GenJournal."Bal. Account No." := Vendor.GetVendorNo(DelChr(GetValue(RowNo, 12), '=', ','));
             DocumentNo := GetValue(RowNo, 1).Split(' ').Get(1);
             GenJournal."Document No." := 'EXP' + DelChr(DocumentNo, '=', '-');
@@ -68,7 +68,7 @@ codeunit 50107 ImportCSVFile
         end;
     end;
 
-    procedure LoadCSVData()
+    procedure LoadCSVData(TemplateName: Code[10]; BatchName: Code[10]; StartDate: Date; EndingDate: Date)
     var
         Client: HttpClient;
         Response: HttpResponseMessage;
@@ -82,7 +82,7 @@ codeunit 50107 ImportCSVFile
             Error(ErrorSetup);
         Request.Method := 'POST';
         Request.SetRequestUri(URL);
-        Content.WriteFrom(StrSubstNo(RequestJobDescription, SMASetup.PartnerUserID, SMASetup.PartnerUserSecret)
+        Content.WriteFrom(StrSubstNo(RequestJobDescription, SMASetup.PartnerUserID, SMASetup.PartnerUserSecret, StartDate, EndingDate)
          + Template);
         Content.GetHeaders(Headers);
         Headers.Remove('Content-Type');
@@ -97,10 +97,10 @@ codeunit 50107 ImportCSVFile
         end else
             Error(ErrorMessageURL);
 
-        DownloadCSV();
+        DownloadCSV(TemplateName, BatchName);
     end;
 
-    local procedure DownloadCSV()
+    local procedure DownloadCSV(TemplateName: Code[10]; BatchName: Code[10])
     var
         Client: HttpClient;
         Response: HttpResponseMessage;
@@ -109,6 +109,7 @@ codeunit 50107 ImportCSVFile
         CSVStream: InStream;
         Content: HttpContent;
         Headers: HttpHeaders;
+        BlobFile: Codeunit "Temp Blob";
     begin
         if not SMASetup.Get() then
             Error(ErrorSetup);
@@ -121,20 +122,16 @@ codeunit 50107 ImportCSVFile
         Request.Content(Content);
         If Client.Send(Request, Response) then begin
             if Response.IsSuccessStatusCode then begin
+                BlobFile.CreateInStream(CSVStream);
                 Response.Content.ReadAs(CSVStream);
                 CSVBufer.LoadDataFromStream(CSVStream, ',');
-                Message(Format(CSVBufer.GetNumberOfLines()));
+                Message('At this time, the lines should be filled, but the number of lines = %1', Format(CSVBufer.GetNumberOfLines()));
             end else
                 Error(BadStatusCode, Response.HttpStatusCode);
         end else
             Error(ErrorMessageURL);
-    end;
 
-    local procedure MyProcedure()
-    var
-        myInt: Integer;
-    begin
-
+        ImportCSVDataFromFile(TemplateName, BatchName);
     end;
 
     local procedure GetValue(RowNo: Integer; ColNo: Integer): Text

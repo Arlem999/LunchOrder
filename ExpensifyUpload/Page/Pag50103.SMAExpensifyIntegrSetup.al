@@ -39,13 +39,7 @@ page 50103 "SMA Expensify Integr. Setup"
                 PromotedCategory = Process;
                 PromotedOnly = true;
                 PromotedIsBig = true;
-
-                trigger OnAction()
-                var
-                    ImportCSVFile: Codeunit ImportCSVFile;
-                begin
-                    // ImportCSVFile.LoadCSVData();
-                end;
+                RunObject = report "SMA Expensify Report Arlem";
             }
         }
     }

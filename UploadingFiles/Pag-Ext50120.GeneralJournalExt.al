@@ -80,7 +80,7 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                     ImportCSVFile: Codeunit ImportCSVFile;
                 begin
                     ImportCSVFile.ReadCSVFile();
-                    ImportCSVFile.ImportCSVDataFromFile(Rec);
+                    ImportCSVFile.ImportCSVDataFromFile(Rec."Journal Template Name", Rec."Journal Batch Name");
                 end;
             }
         }
@@ -106,14 +106,7 @@ pageextension 50120 "General Journal Ext" extends "General Journal"
                 PromotedCategory = Process;
                 PromotedOnly = true;
                 PromotedIsBig = true;
-
-                trigger OnAction()
-                var
-                    ImportCSVFile: Codeunit ImportCSVFile;
-                begin
-                    ImportCSVFile.LoadCSVData();
-                    // ImportCSVFile.ImportCSVDataFromAPI(Rec);
-                end;
+                RunObject = report "SMA Expensify Report Arlem";
             }
         }
     }

@@ -339,7 +339,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType ErrorSetup</note>
         </trans-unit>
         <trans-unit id="Codeunit 459573375 - NamedType 207664548" size-unit="char" translate="yes" xml:space="preserve">
-          <source>requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "%1", "partnerUserSecret": "%2" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"2022-10-1", } }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}</source>
+          <source>requestJobDescription={"test": "true","type": "file","credentials":{"partnerUserID": "%1", "partnerUserSecret": "%2" },"onReceive":{"immediateResponse":["returnRandomFileName"] }, "inputSettings":{ "type":"combinedReportData", "filters":{ "startDate":"%3", "endDate":"%4"} }, "outputSettings":{"fileExtension":"csv" }, "onFinish":[{"actionName":"markAsExported","label":"Partner name"}]}</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ImportCSVFile - NamedType RequestJobDescription</note>
         </trans-unit>
@@ -427,26 +427,6 @@
           <source>Sorry, but this item has already been added to the order</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Lunch Delete And Modify Events - Method OnBeforeModifyEvent - NamedType ErrorTxt</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3880320715 - NamedType 3386072072" size-unit="char" translate="yes" xml:space="preserve">
-          <source>https://data.norges-bank.no/api/data/EXR/B.%1.NOK.SP?format=sdmx-generic-2.1&amp;startPeriod=%2&amp;endPeriod=%2&amp;locale=en</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType ImportExchangeRatesURL</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3880320715 - NamedType 1821330829" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unexpected %1 attribute format.</source>
-          <note from="Developer" annotates="general" priority="2">%1= attribute name</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType UnexpectedAttrErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3880320715 - NamedType 1698465700" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unexpected %1 node value.</source>
-          <note from="Developer" annotates="general" priority="2">%1 = node name</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType UnexpectedNoteErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3880320715 - NamedType 3444893307" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unexpected XML structure.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit SMA Import Exchange Rates NO - NamedType XMLUnexpectedErr</note>
         </trans-unit>
         <trans-unit id="Page 3102238896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Custom Posting Descrip Arlem</source>
@@ -697,6 +677,11 @@
           <source>SMA Expensify Report Arlem</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report SMA Expensify Report Arlem - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3664626503 - NamedType 672599587" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File imported successfully</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report SMA Expensify Report Arlem - NamedType Txt001</note>
         </trans-unit>
         <trans-unit id="PageExtension 1467278014 - Control 1508780422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
           <source>Custom ARLEM Posting Description</source>
